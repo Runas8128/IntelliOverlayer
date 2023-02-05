@@ -1,4 +1,5 @@
-# Overlayer IntelliCode
+# IntelliOverlayer
+
 오버레이어 커스텀태그 작성에 도움을 주는 익스텐션입니다!
 
 현재 지원하는 태그는 1.35.0 (`expression` 태그 추가) 까지 입니다.
@@ -33,4 +34,4 @@ ___
 
 ### 1.0.0
 
-* 초기 릴리즈 ||| Initial release of Overlayer IntelliCode
+* 초기 릴리즈 ||| Initial release of IntelliOverlayer
