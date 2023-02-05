@@ -1,0 +1,3473 @@
+[
+  {
+    "args": [],
+    "retType": "string",
+    "name": "SHit",
+    "desc": "HitMargin in Strict Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "STE",
+    "desc": "TooEarly in Strict Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "SVE",
+    "desc": "VeryEarly in Strict Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "SEP",
+    "desc": "EarlyPerfect in Strict Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "SP",
+    "desc": "Perfect in Strict Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "SLP",
+    "desc": "LatePerfect in Strict Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "SVL",
+    "desc": "VeryLate in Strict Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "STL",
+    "desc": "TooLate in Strict Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "NHit",
+    "desc": "HitMargin in Normal Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "NTE",
+    "desc": "TooEarly in Normal Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "NVE",
+    "desc": "VeryEarly in Normal Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "NEP",
+    "desc": "EarlyPerfect in Normal Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "NP",
+    "desc": "Perfect in Normal Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "NLP",
+    "desc": "LatePerfect in Normal Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "NVL",
+    "desc": "VeryLate in Normal Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "NTL",
+    "desc": "TooLate in Normal Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "LHit",
+    "desc": "HitMargin in Lenient Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "LTE",
+    "desc": "TooEarly in Lenient Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "LVE",
+    "desc": "VeryEarly in Lenient Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "LEP",
+    "desc": "EarlyPerfect in Lenient Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "LP",
+    "desc": "Perfect in Lenient Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "LLP",
+    "desc": "LatePerfect in Lenient Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "LVL",
+    "desc": "VeryLate in Lenient Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "LTL",
+    "desc": "TooLate in Lenient Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "CurHit",
+    "desc": "HitMargin in Current Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurTE",
+    "desc": "TooEarly in Current Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurVE",
+    "desc": "VeryEarly in Current Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurEP",
+    "desc": "EarlyPerfect in Current Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurP",
+    "desc": "Perfect in Current Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurLP",
+    "desc": "LatePerfect in Current Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurVL",
+    "desc": "VeryLate in Current Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurTL",
+    "desc": "TooLate in Current Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "FailCount",
+    "desc": "Fail Count"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "MissCount",
+    "desc": "Miss Count"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Overloads",
+    "desc": "Overloads Count"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Multipress",
+    "desc": "Multipress Count"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "string",
+    "name": "KeyJudge",
+    "desc": "KeyCode:Judgement"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "TEHex",
+    "desc": "TooEarly Judgement Hex Code"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "VEHex",
+    "desc": "VeryEarly Judgement Hex Code"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "EPHex",
+    "desc": "EarlyPerfect Judgement Hex Code"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "PHex",
+    "desc": "Perfect Judgement Hex Code"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "LPHex",
+    "desc": "LatePerfect Judgement Hex Code"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "VLHex",
+    "desc": "VeryLate Judgement Hex Code"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "TLHex",
+    "desc": "TooLate Judgement Hex Code"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "MPHex",
+    "desc": "Multipress Judgement Hex Code"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "FMHex",
+    "desc": "FailMiss Judgement Hex Code"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "FOHex",
+    "desc": "FailOverload Judgement Hex Code"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "Progress",
+    "desc": "Progress"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "StartTile",
+    "desc": "Start Tile"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "LeftTile",
+    "desc": "Left Tile Count"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "TotalTile",
+    "desc": "Total Tile Count"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurTile",
+    "desc": "Current Tile Count"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "BestProgress",
+    "desc": "Best Progress"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "LeastCheckPoint",
+    "desc": "Least Check Point Used Count"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "StartProgress",
+    "desc": "Start Progress"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "ProgressDeath",
+    "desc": "Death Count for progress"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "Accuracy",
+    "desc": "Accuracy"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "XAccuracy",
+    "desc": "XAccuracy"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "Timing",
+    "desc": "Hit Timing"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "TimingAvg",
+    "desc": "Average Hit Timing"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Combo",
+    "desc": "Combo"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "PlayPoint",
+    "desc": "PlayPoint(PP) in adofai.gg"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Score",
+    "desc": "Score in Current Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "LScore",
+    "desc": "Score in Lenient Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "NScore",
+    "desc": "Score in Normal Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "SScore",
+    "desc": "Score in Strict Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurMinute",
+    "desc": "Now Minute of Music"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurSecond",
+    "desc": "Now Second of Music"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurMilliSecond",
+    "desc": "Now MilliSecond of Music"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "TotalMinute",
+    "desc": "Total Minute of Music"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "TotalSecond",
+    "desc": "Total Second of Music"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "TotalMilliSecond",
+    "desc": "Total MilliSecond of Music"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "Pitch",
+    "desc": "Current Pitch"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "EditorPitch",
+    "desc": "Pitch In Editor"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "CurBpm",
+    "desc": "Perceived Bpm"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "TileBpm",
+    "desc": "Tile Bpm"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "RecKps",
+    "desc": "Perceived KPS"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurKps",
+    "desc": "Current KPS"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Year",
+    "desc": "Year of System time"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Month",
+    "desc": "Month of System time"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Day",
+    "desc": "Day of System time"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Hour",
+    "desc": "Hour of System time"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Minute",
+    "desc": "Minute of System time"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Second",
+    "desc": "Second of System time"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "MilliSecond",
+    "desc": "MilliSecond of System time"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "Fps",
+    "desc": "Frame Rate"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "FrameTime",
+    "desc": "FrameTime"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "ProcessorCount",
+    "desc": "CPU Core Count"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "MemoryGBytes",
+    "desc": "Total Physical Memory Size (GBytes)"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "CpuUsage",
+    "desc": "ADOFAI's CPU Usage (%)"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "TotalCpuUsage",
+    "desc": "Total CPU Usage (%)"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "MemoryUsage",
+    "desc": "ADOFAI's Memory Usage (%)"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "TotalMemoryUsage",
+    "desc": "Total Memory Usage"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "MemoryUsageGBytes",
+    "desc": "ADOFAI's Memory Usage (GBytes)"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "TotalMemoryUsageGBytes",
+    "desc": "Total Memory Usage (GBytes)"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "Difficulty",
+    "desc": "Difficulty of current level"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "IntegratedDifficulty",
+    "desc": "Integrated Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "ForumDifficulty",
+    "desc": "Forum Difficulty"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "PredictedDIfficulty",
+    "desc": "Predicted Difficulty"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "Radius",
+    "desc": "Current Planet's Radius"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "Title",
+    "desc": "Title"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "Author",
+    "desc": "Author"
+  },
+  {
+    "args": [],
+    "retType": "string",
+    "name": "Artist",
+    "desc": "Artist"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CheckPoint",
+    "desc": "Check Point Used Count"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurCheckPoint",
+    "desc": "Current Check Point Index"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "TotalCheckPoint",
+    "desc": "Total Check Points Count"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Attempts",
+    "desc": "Current Level Try Count"
+  },
+  {
+    "args": [
+      {
+        "type": "string",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "PlayTime",
+    "desc": "PlayTime with Unit received as Option"
+  },
+  {
+    "args": [
+      {
+        "type": "string",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "string | number",
+    "name": "Expression",
+    "desc": "Evaluated Result"
+  },
+  {
+    "vars": [
+      {
+        "value": 0,
+        "name": "None",
+        "desc": ""
+      },
+      {
+        "value": 8,
+        "name": "Backspace",
+        "desc": ""
+      },
+      {
+        "value": 127,
+        "name": "Delete",
+        "desc": ""
+      },
+      {
+        "value": 9,
+        "name": "Tab",
+        "desc": ""
+      },
+      {
+        "value": 12,
+        "name": "Clear",
+        "desc": ""
+      },
+      {
+        "value": 13,
+        "name": "Return",
+        "desc": ""
+      },
+      {
+        "value": 19,
+        "name": "Pause",
+        "desc": ""
+      },
+      {
+        "value": 27,
+        "name": "Escape",
+        "desc": ""
+      },
+      {
+        "value": 32,
+        "name": "Space",
+        "desc": ""
+      },
+      {
+        "value": 256,
+        "name": "Keypad0",
+        "desc": ""
+      },
+      {
+        "value": 257,
+        "name": "Keypad1",
+        "desc": ""
+      },
+      {
+        "value": 258,
+        "name": "Keypad2",
+        "desc": ""
+      },
+      {
+        "value": 259,
+        "name": "Keypad3",
+        "desc": ""
+      },
+      {
+        "value": 260,
+        "name": "Keypad4",
+        "desc": ""
+      },
+      {
+        "value": 261,
+        "name": "Keypad5",
+        "desc": ""
+      },
+      {
+        "value": 262,
+        "name": "Keypad6",
+        "desc": ""
+      },
+      {
+        "value": 263,
+        "name": "Keypad7",
+        "desc": ""
+      },
+      {
+        "value": 264,
+        "name": "Keypad8",
+        "desc": ""
+      },
+      {
+        "value": 265,
+        "name": "Keypad9",
+        "desc": ""
+      },
+      {
+        "value": 266,
+        "name": "KeypadPeriod",
+        "desc": ""
+      },
+      {
+        "value": 267,
+        "name": "KeypadDivide",
+        "desc": ""
+      },
+      {
+        "value": 268,
+        "name": "KeypadMultiply",
+        "desc": ""
+      },
+      {
+        "value": 269,
+        "name": "KeypadMinus",
+        "desc": ""
+      },
+      {
+        "value": 270,
+        "name": "KeypadPlus",
+        "desc": ""
+      },
+      {
+        "value": 271,
+        "name": "KeypadEnter",
+        "desc": ""
+      },
+      {
+        "value": 272,
+        "name": "KeypadEquals",
+        "desc": ""
+      },
+      {
+        "value": 273,
+        "name": "UpArrow",
+        "desc": ""
+      },
+      {
+        "value": 274,
+        "name": "DownArrow",
+        "desc": ""
+      },
+      {
+        "value": 275,
+        "name": "RightArrow",
+        "desc": ""
+      },
+      {
+        "value": 276,
+        "name": "LeftArrow",
+        "desc": ""
+      },
+      {
+        "value": 277,
+        "name": "Insert",
+        "desc": ""
+      },
+      {
+        "value": 278,
+        "name": "Home",
+        "desc": ""
+      },
+      {
+        "value": 279,
+        "name": "End",
+        "desc": ""
+      },
+      {
+        "value": 280,
+        "name": "PageUp",
+        "desc": ""
+      },
+      {
+        "value": 281,
+        "name": "PageDown",
+        "desc": ""
+      },
+      {
+        "value": 282,
+        "name": "F1",
+        "desc": ""
+      },
+      {
+        "value": 283,
+        "name": "F2",
+        "desc": ""
+      },
+      {
+        "value": 284,
+        "name": "F3",
+        "desc": ""
+      },
+      {
+        "value": 285,
+        "name": "F4",
+        "desc": ""
+      },
+      {
+        "value": 286,
+        "name": "F5",
+        "desc": ""
+      },
+      {
+        "value": 287,
+        "name": "F6",
+        "desc": ""
+      },
+      {
+        "value": 288,
+        "name": "F7",
+        "desc": ""
+      },
+      {
+        "value": 289,
+        "name": "F8",
+        "desc": ""
+      },
+      {
+        "value": 290,
+        "name": "F9",
+        "desc": ""
+      },
+      {
+        "value": 291,
+        "name": "F10",
+        "desc": ""
+      },
+      {
+        "value": 292,
+        "name": "F11",
+        "desc": ""
+      },
+      {
+        "value": 293,
+        "name": "F12",
+        "desc": ""
+      },
+      {
+        "value": 294,
+        "name": "F13",
+        "desc": ""
+      },
+      {
+        "value": 295,
+        "name": "F14",
+        "desc": ""
+      },
+      {
+        "value": 296,
+        "name": "F15",
+        "desc": ""
+      },
+      {
+        "value": 48,
+        "name": "Alpha0",
+        "desc": ""
+      },
+      {
+        "value": 49,
+        "name": "Alpha1",
+        "desc": ""
+      },
+      {
+        "value": 50,
+        "name": "Alpha2",
+        "desc": ""
+      },
+      {
+        "value": 51,
+        "name": "Alpha3",
+        "desc": ""
+      },
+      {
+        "value": 52,
+        "name": "Alpha4",
+        "desc": ""
+      },
+      {
+        "value": 53,
+        "name": "Alpha5",
+        "desc": ""
+      },
+      {
+        "value": 54,
+        "name": "Alpha6",
+        "desc": ""
+      },
+      {
+        "value": 55,
+        "name": "Alpha7",
+        "desc": ""
+      },
+      {
+        "value": 56,
+        "name": "Alpha8",
+        "desc": ""
+      },
+      {
+        "value": 57,
+        "name": "Alpha9",
+        "desc": ""
+      },
+      {
+        "value": 33,
+        "name": "Exclaim",
+        "desc": ""
+      },
+      {
+        "value": 34,
+        "name": "DoubleQuote",
+        "desc": ""
+      },
+      {
+        "value": 35,
+        "name": "Hash",
+        "desc": ""
+      },
+      {
+        "value": 36,
+        "name": "Dollar",
+        "desc": ""
+      },
+      {
+        "value": 37,
+        "name": "Percent",
+        "desc": ""
+      },
+      {
+        "value": 38,
+        "name": "Ampersand",
+        "desc": ""
+      },
+      {
+        "value": 39,
+        "name": "Quote",
+        "desc": ""
+      },
+      {
+        "value": 40,
+        "name": "LeftParen",
+        "desc": ""
+      },
+      {
+        "value": 41,
+        "name": "RightParen",
+        "desc": ""
+      },
+      {
+        "value": 42,
+        "name": "Asterisk",
+        "desc": ""
+      },
+      {
+        "value": 43,
+        "name": "Plus",
+        "desc": ""
+      },
+      {
+        "value": 44,
+        "name": "Comma",
+        "desc": ""
+      },
+      {
+        "value": 45,
+        "name": "Minus",
+        "desc": ""
+      },
+      {
+        "value": 46,
+        "name": "Period",
+        "desc": ""
+      },
+      {
+        "value": 47,
+        "name": "Slash",
+        "desc": ""
+      },
+      {
+        "value": 58,
+        "name": "Colon",
+        "desc": ""
+      },
+      {
+        "value": 59,
+        "name": "Semicolon",
+        "desc": ""
+      },
+      {
+        "value": 60,
+        "name": "Less",
+        "desc": ""
+      },
+      {
+        "value": 61,
+        "name": "Equals",
+        "desc": ""
+      },
+      {
+        "value": 62,
+        "name": "Greater",
+        "desc": ""
+      },
+      {
+        "value": 63,
+        "name": "Question",
+        "desc": ""
+      },
+      {
+        "value": 64,
+        "name": "At",
+        "desc": ""
+      },
+      {
+        "value": 91,
+        "name": "LeftBracket",
+        "desc": ""
+      },
+      {
+        "value": 92,
+        "name": "Backslash",
+        "desc": ""
+      },
+      {
+        "value": 93,
+        "name": "RightBracket",
+        "desc": ""
+      },
+      {
+        "value": 94,
+        "name": "Caret",
+        "desc": ""
+      },
+      {
+        "value": 95,
+        "name": "Underscore",
+        "desc": ""
+      },
+      {
+        "value": 96,
+        "name": "BackQuote",
+        "desc": ""
+      },
+      {
+        "value": 97,
+        "name": "A",
+        "desc": ""
+      },
+      {
+        "value": 98,
+        "name": "B",
+        "desc": ""
+      },
+      {
+        "value": 99,
+        "name": "C",
+        "desc": ""
+      },
+      {
+        "value": 100,
+        "name": "D",
+        "desc": ""
+      },
+      {
+        "value": 101,
+        "name": "E",
+        "desc": ""
+      },
+      {
+        "value": 102,
+        "name": "F",
+        "desc": ""
+      },
+      {
+        "value": 103,
+        "name": "G",
+        "desc": ""
+      },
+      {
+        "value": 104,
+        "name": "H",
+        "desc": ""
+      },
+      {
+        "value": 105,
+        "name": "I",
+        "desc": ""
+      },
+      {
+        "value": 106,
+        "name": "J",
+        "desc": ""
+      },
+      {
+        "value": 107,
+        "name": "K",
+        "desc": ""
+      },
+      {
+        "value": 108,
+        "name": "L",
+        "desc": ""
+      },
+      {
+        "value": 109,
+        "name": "M",
+        "desc": ""
+      },
+      {
+        "value": 110,
+        "name": "N",
+        "desc": ""
+      },
+      {
+        "value": 111,
+        "name": "O",
+        "desc": ""
+      },
+      {
+        "value": 112,
+        "name": "P",
+        "desc": ""
+      },
+      {
+        "value": 113,
+        "name": "Q",
+        "desc": ""
+      },
+      {
+        "value": 114,
+        "name": "R",
+        "desc": ""
+      },
+      {
+        "value": 115,
+        "name": "S",
+        "desc": ""
+      },
+      {
+        "value": 116,
+        "name": "T",
+        "desc": ""
+      },
+      {
+        "value": 117,
+        "name": "U",
+        "desc": ""
+      },
+      {
+        "value": 118,
+        "name": "V",
+        "desc": ""
+      },
+      {
+        "value": 119,
+        "name": "W",
+        "desc": ""
+      },
+      {
+        "value": 120,
+        "name": "X",
+        "desc": ""
+      },
+      {
+        "value": 121,
+        "name": "Y",
+        "desc": ""
+      },
+      {
+        "value": 122,
+        "name": "Z",
+        "desc": ""
+      },
+      {
+        "value": 123,
+        "name": "LeftCurlyBracket",
+        "desc": ""
+      },
+      {
+        "value": 124,
+        "name": "Pipe",
+        "desc": ""
+      },
+      {
+        "value": 125,
+        "name": "RightCurlyBracket",
+        "desc": ""
+      },
+      {
+        "value": 126,
+        "name": "Tilde",
+        "desc": ""
+      },
+      {
+        "value": 300,
+        "name": "Numlock",
+        "desc": ""
+      },
+      {
+        "value": 301,
+        "name": "CapsLock",
+        "desc": ""
+      },
+      {
+        "value": 302,
+        "name": "ScrollLock",
+        "desc": ""
+      },
+      {
+        "value": 303,
+        "name": "RightShift",
+        "desc": ""
+      },
+      {
+        "value": 304,
+        "name": "LeftShift",
+        "desc": ""
+      },
+      {
+        "value": 305,
+        "name": "RightControl",
+        "desc": ""
+      },
+      {
+        "value": 306,
+        "name": "LeftControl",
+        "desc": ""
+      },
+      {
+        "value": 307,
+        "name": "RightAlt",
+        "desc": ""
+      },
+      {
+        "value": 308,
+        "name": "LeftAlt",
+        "desc": ""
+      },
+      {
+        "value": 310,
+        "name": "LeftMeta",
+        "desc": ""
+      },
+      {
+        "value": 310,
+        "name": "LeftCommand",
+        "desc": ""
+      },
+      {
+        "value": 310,
+        "name": "LeftApple",
+        "desc": ""
+      },
+      {
+        "value": 311,
+        "name": "LeftWindows",
+        "desc": ""
+      },
+      {
+        "value": 309,
+        "name": "RightMeta",
+        "desc": ""
+      },
+      {
+        "value": 309,
+        "name": "RightCommand",
+        "desc": ""
+      },
+      {
+        "value": 309,
+        "name": "RightApple",
+        "desc": ""
+      },
+      {
+        "value": 312,
+        "name": "RightWindows",
+        "desc": ""
+      },
+      {
+        "value": 313,
+        "name": "AltGr",
+        "desc": ""
+      },
+      {
+        "value": 315,
+        "name": "Help",
+        "desc": ""
+      },
+      {
+        "value": 316,
+        "name": "Print",
+        "desc": ""
+      },
+      {
+        "value": 317,
+        "name": "SysReq",
+        "desc": ""
+      },
+      {
+        "value": 318,
+        "name": "Break",
+        "desc": ""
+      },
+      {
+        "value": 319,
+        "name": "Menu",
+        "desc": ""
+      },
+      {
+        "value": 323,
+        "name": "Mouse0",
+        "desc": ""
+      },
+      {
+        "value": 324,
+        "name": "Mouse1",
+        "desc": ""
+      },
+      {
+        "value": 325,
+        "name": "Mouse2",
+        "desc": ""
+      },
+      {
+        "value": 326,
+        "name": "Mouse3",
+        "desc": ""
+      },
+      {
+        "value": 327,
+        "name": "Mouse4",
+        "desc": ""
+      },
+      {
+        "value": 328,
+        "name": "Mouse5",
+        "desc": ""
+      },
+      {
+        "value": 329,
+        "name": "Mouse6",
+        "desc": ""
+      },
+      {
+        "value": 330,
+        "name": "JoystickButton0",
+        "desc": ""
+      },
+      {
+        "value": 331,
+        "name": "JoystickButton1",
+        "desc": ""
+      },
+      {
+        "value": 332,
+        "name": "JoystickButton2",
+        "desc": ""
+      },
+      {
+        "value": 333,
+        "name": "JoystickButton3",
+        "desc": ""
+      },
+      {
+        "value": 334,
+        "name": "JoystickButton4",
+        "desc": ""
+      },
+      {
+        "value": 335,
+        "name": "JoystickButton5",
+        "desc": ""
+      },
+      {
+        "value": 336,
+        "name": "JoystickButton6",
+        "desc": ""
+      },
+      {
+        "value": 337,
+        "name": "JoystickButton7",
+        "desc": ""
+      },
+      {
+        "value": 338,
+        "name": "JoystickButton8",
+        "desc": ""
+      },
+      {
+        "value": 339,
+        "name": "JoystickButton9",
+        "desc": ""
+      },
+      {
+        "value": 340,
+        "name": "JoystickButton10",
+        "desc": ""
+      },
+      {
+        "value": 341,
+        "name": "JoystickButton11",
+        "desc": ""
+      },
+      {
+        "value": 342,
+        "name": "JoystickButton12",
+        "desc": ""
+      },
+      {
+        "value": 343,
+        "name": "JoystickButton13",
+        "desc": ""
+      },
+      {
+        "value": 344,
+        "name": "JoystickButton14",
+        "desc": ""
+      },
+      {
+        "value": 345,
+        "name": "JoystickButton15",
+        "desc": ""
+      },
+      {
+        "value": 346,
+        "name": "JoystickButton16",
+        "desc": ""
+      },
+      {
+        "value": 347,
+        "name": "JoystickButton17",
+        "desc": ""
+      },
+      {
+        "value": 348,
+        "name": "JoystickButton18",
+        "desc": ""
+      },
+      {
+        "value": 349,
+        "name": "JoystickButton19",
+        "desc": ""
+      },
+      {
+        "value": 350,
+        "name": "Joystick1Button0",
+        "desc": ""
+      },
+      {
+        "value": 351,
+        "name": "Joystick1Button1",
+        "desc": ""
+      },
+      {
+        "value": 352,
+        "name": "Joystick1Button2",
+        "desc": ""
+      },
+      {
+        "value": 353,
+        "name": "Joystick1Button3",
+        "desc": ""
+      },
+      {
+        "value": 354,
+        "name": "Joystick1Button4",
+        "desc": ""
+      },
+      {
+        "value": 355,
+        "name": "Joystick1Button5",
+        "desc": ""
+      },
+      {
+        "value": 356,
+        "name": "Joystick1Button6",
+        "desc": ""
+      },
+      {
+        "value": 357,
+        "name": "Joystick1Button7",
+        "desc": ""
+      },
+      {
+        "value": 358,
+        "name": "Joystick1Button8",
+        "desc": ""
+      },
+      {
+        "value": 359,
+        "name": "Joystick1Button9",
+        "desc": ""
+      },
+      {
+        "value": 360,
+        "name": "Joystick1Button10",
+        "desc": ""
+      },
+      {
+        "value": 361,
+        "name": "Joystick1Button11",
+        "desc": ""
+      },
+      {
+        "value": 362,
+        "name": "Joystick1Button12",
+        "desc": ""
+      },
+      {
+        "value": 363,
+        "name": "Joystick1Button13",
+        "desc": ""
+      },
+      {
+        "value": 364,
+        "name": "Joystick1Button14",
+        "desc": ""
+      },
+      {
+        "value": 365,
+        "name": "Joystick1Button15",
+        "desc": ""
+      },
+      {
+        "value": 366,
+        "name": "Joystick1Button16",
+        "desc": ""
+      },
+      {
+        "value": 367,
+        "name": "Joystick1Button17",
+        "desc": ""
+      },
+      {
+        "value": 368,
+        "name": "Joystick1Button18",
+        "desc": ""
+      },
+      {
+        "value": 369,
+        "name": "Joystick1Button19",
+        "desc": ""
+      },
+      {
+        "value": 370,
+        "name": "Joystick2Button0",
+        "desc": ""
+      },
+      {
+        "value": 371,
+        "name": "Joystick2Button1",
+        "desc": ""
+      },
+      {
+        "value": 372,
+        "name": "Joystick2Button2",
+        "desc": ""
+      },
+      {
+        "value": 373,
+        "name": "Joystick2Button3",
+        "desc": ""
+      },
+      {
+        "value": 374,
+        "name": "Joystick2Button4",
+        "desc": ""
+      },
+      {
+        "value": 375,
+        "name": "Joystick2Button5",
+        "desc": ""
+      },
+      {
+        "value": 376,
+        "name": "Joystick2Button6",
+        "desc": ""
+      },
+      {
+        "value": 377,
+        "name": "Joystick2Button7",
+        "desc": ""
+      },
+      {
+        "value": 378,
+        "name": "Joystick2Button8",
+        "desc": ""
+      },
+      {
+        "value": 379,
+        "name": "Joystick2Button9",
+        "desc": ""
+      },
+      {
+        "value": 380,
+        "name": "Joystick2Button10",
+        "desc": ""
+      },
+      {
+        "value": 381,
+        "name": "Joystick2Button11",
+        "desc": ""
+      },
+      {
+        "value": 382,
+        "name": "Joystick2Button12",
+        "desc": ""
+      },
+      {
+        "value": 383,
+        "name": "Joystick2Button13",
+        "desc": ""
+      },
+      {
+        "value": 384,
+        "name": "Joystick2Button14",
+        "desc": ""
+      },
+      {
+        "value": 385,
+        "name": "Joystick2Button15",
+        "desc": ""
+      },
+      {
+        "value": 386,
+        "name": "Joystick2Button16",
+        "desc": ""
+      },
+      {
+        "value": 387,
+        "name": "Joystick2Button17",
+        "desc": ""
+      },
+      {
+        "value": 388,
+        "name": "Joystick2Button18",
+        "desc": ""
+      },
+      {
+        "value": 389,
+        "name": "Joystick2Button19",
+        "desc": ""
+      },
+      {
+        "value": 390,
+        "name": "Joystick3Button0",
+        "desc": ""
+      },
+      {
+        "value": 391,
+        "name": "Joystick3Button1",
+        "desc": ""
+      },
+      {
+        "value": 392,
+        "name": "Joystick3Button2",
+        "desc": ""
+      },
+      {
+        "value": 393,
+        "name": "Joystick3Button3",
+        "desc": ""
+      },
+      {
+        "value": 394,
+        "name": "Joystick3Button4",
+        "desc": ""
+      },
+      {
+        "value": 395,
+        "name": "Joystick3Button5",
+        "desc": ""
+      },
+      {
+        "value": 396,
+        "name": "Joystick3Button6",
+        "desc": ""
+      },
+      {
+        "value": 397,
+        "name": "Joystick3Button7",
+        "desc": ""
+      },
+      {
+        "value": 398,
+        "name": "Joystick3Button8",
+        "desc": ""
+      },
+      {
+        "value": 399,
+        "name": "Joystick3Button9",
+        "desc": ""
+      },
+      {
+        "value": 400,
+        "name": "Joystick3Button10",
+        "desc": ""
+      },
+      {
+        "value": 401,
+        "name": "Joystick3Button11",
+        "desc": ""
+      },
+      {
+        "value": 402,
+        "name": "Joystick3Button12",
+        "desc": ""
+      },
+      {
+        "value": 403,
+        "name": "Joystick3Button13",
+        "desc": ""
+      },
+      {
+        "value": 404,
+        "name": "Joystick3Button14",
+        "desc": ""
+      },
+      {
+        "value": 405,
+        "name": "Joystick3Button15",
+        "desc": ""
+      },
+      {
+        "value": 406,
+        "name": "Joystick3Button16",
+        "desc": ""
+      },
+      {
+        "value": 407,
+        "name": "Joystick3Button17",
+        "desc": ""
+      },
+      {
+        "value": 408,
+        "name": "Joystick3Button18",
+        "desc": ""
+      },
+      {
+        "value": 409,
+        "name": "Joystick3Button19",
+        "desc": ""
+      },
+      {
+        "value": 410,
+        "name": "Joystick4Button0",
+        "desc": ""
+      },
+      {
+        "value": 411,
+        "name": "Joystick4Button1",
+        "desc": ""
+      },
+      {
+        "value": 412,
+        "name": "Joystick4Button2",
+        "desc": ""
+      },
+      {
+        "value": 413,
+        "name": "Joystick4Button3",
+        "desc": ""
+      },
+      {
+        "value": 414,
+        "name": "Joystick4Button4",
+        "desc": ""
+      },
+      {
+        "value": 415,
+        "name": "Joystick4Button5",
+        "desc": ""
+      },
+      {
+        "value": 416,
+        "name": "Joystick4Button6",
+        "desc": ""
+      },
+      {
+        "value": 417,
+        "name": "Joystick4Button7",
+        "desc": ""
+      },
+      {
+        "value": 418,
+        "name": "Joystick4Button8",
+        "desc": ""
+      },
+      {
+        "value": 419,
+        "name": "Joystick4Button9",
+        "desc": ""
+      },
+      {
+        "value": 420,
+        "name": "Joystick4Button10",
+        "desc": ""
+      },
+      {
+        "value": 421,
+        "name": "Joystick4Button11",
+        "desc": ""
+      },
+      {
+        "value": 422,
+        "name": "Joystick4Button12",
+        "desc": ""
+      },
+      {
+        "value": 423,
+        "name": "Joystick4Button13",
+        "desc": ""
+      },
+      {
+        "value": 424,
+        "name": "Joystick4Button14",
+        "desc": ""
+      },
+      {
+        "value": 425,
+        "name": "Joystick4Button15",
+        "desc": ""
+      },
+      {
+        "value": 426,
+        "name": "Joystick4Button16",
+        "desc": ""
+      },
+      {
+        "value": 427,
+        "name": "Joystick4Button17",
+        "desc": ""
+      },
+      {
+        "value": 428,
+        "name": "Joystick4Button18",
+        "desc": ""
+      },
+      {
+        "value": 429,
+        "name": "Joystick4Button19",
+        "desc": ""
+      },
+      {
+        "value": 430,
+        "name": "Joystick5Button0",
+        "desc": ""
+      },
+      {
+        "value": 431,
+        "name": "Joystick5Button1",
+        "desc": ""
+      },
+      {
+        "value": 432,
+        "name": "Joystick5Button2",
+        "desc": ""
+      },
+      {
+        "value": 433,
+        "name": "Joystick5Button3",
+        "desc": ""
+      },
+      {
+        "value": 434,
+        "name": "Joystick5Button4",
+        "desc": ""
+      },
+      {
+        "value": 435,
+        "name": "Joystick5Button5",
+        "desc": ""
+      },
+      {
+        "value": 436,
+        "name": "Joystick5Button6",
+        "desc": ""
+      },
+      {
+        "value": 437,
+        "name": "Joystick5Button7",
+        "desc": ""
+      },
+      {
+        "value": 438,
+        "name": "Joystick5Button8",
+        "desc": ""
+      },
+      {
+        "value": 439,
+        "name": "Joystick5Button9",
+        "desc": ""
+      },
+      {
+        "value": 440,
+        "name": "Joystick5Button10",
+        "desc": ""
+      },
+      {
+        "value": 441,
+        "name": "Joystick5Button11",
+        "desc": ""
+      },
+      {
+        "value": 442,
+        "name": "Joystick5Button12",
+        "desc": ""
+      },
+      {
+        "value": 443,
+        "name": "Joystick5Button13",
+        "desc": ""
+      },
+      {
+        "value": 444,
+        "name": "Joystick5Button14",
+        "desc": ""
+      },
+      {
+        "value": 445,
+        "name": "Joystick5Button15",
+        "desc": ""
+      },
+      {
+        "value": 446,
+        "name": "Joystick5Button16",
+        "desc": ""
+      },
+      {
+        "value": 447,
+        "name": "Joystick5Button17",
+        "desc": ""
+      },
+      {
+        "value": 448,
+        "name": "Joystick5Button18",
+        "desc": ""
+      },
+      {
+        "value": 449,
+        "name": "Joystick5Button19",
+        "desc": ""
+      },
+      {
+        "value": 450,
+        "name": "Joystick6Button0",
+        "desc": ""
+      },
+      {
+        "value": 451,
+        "name": "Joystick6Button1",
+        "desc": ""
+      },
+      {
+        "value": 452,
+        "name": "Joystick6Button2",
+        "desc": ""
+      },
+      {
+        "value": 453,
+        "name": "Joystick6Button3",
+        "desc": ""
+      },
+      {
+        "value": 454,
+        "name": "Joystick6Button4",
+        "desc": ""
+      },
+      {
+        "value": 455,
+        "name": "Joystick6Button5",
+        "desc": ""
+      },
+      {
+        "value": 456,
+        "name": "Joystick6Button6",
+        "desc": ""
+      },
+      {
+        "value": 457,
+        "name": "Joystick6Button7",
+        "desc": ""
+      },
+      {
+        "value": 458,
+        "name": "Joystick6Button8",
+        "desc": ""
+      },
+      {
+        "value": 459,
+        "name": "Joystick6Button9",
+        "desc": ""
+      },
+      {
+        "value": 460,
+        "name": "Joystick6Button10",
+        "desc": ""
+      },
+      {
+        "value": 461,
+        "name": "Joystick6Button11",
+        "desc": ""
+      },
+      {
+        "value": 462,
+        "name": "Joystick6Button12",
+        "desc": ""
+      },
+      {
+        "value": 463,
+        "name": "Joystick6Button13",
+        "desc": ""
+      },
+      {
+        "value": 464,
+        "name": "Joystick6Button14",
+        "desc": ""
+      },
+      {
+        "value": 465,
+        "name": "Joystick6Button15",
+        "desc": ""
+      },
+      {
+        "value": 466,
+        "name": "Joystick6Button16",
+        "desc": ""
+      },
+      {
+        "value": 467,
+        "name": "Joystick6Button17",
+        "desc": ""
+      },
+      {
+        "value": 468,
+        "name": "Joystick6Button18",
+        "desc": ""
+      },
+      {
+        "value": 469,
+        "name": "Joystick6Button19",
+        "desc": ""
+      },
+      {
+        "value": 470,
+        "name": "Joystick7Button0",
+        "desc": ""
+      },
+      {
+        "value": 471,
+        "name": "Joystick7Button1",
+        "desc": ""
+      },
+      {
+        "value": 472,
+        "name": "Joystick7Button2",
+        "desc": ""
+      },
+      {
+        "value": 473,
+        "name": "Joystick7Button3",
+        "desc": ""
+      },
+      {
+        "value": 474,
+        "name": "Joystick7Button4",
+        "desc": ""
+      },
+      {
+        "value": 475,
+        "name": "Joystick7Button5",
+        "desc": ""
+      },
+      {
+        "value": 476,
+        "name": "Joystick7Button6",
+        "desc": ""
+      },
+      {
+        "value": 477,
+        "name": "Joystick7Button7",
+        "desc": ""
+      },
+      {
+        "value": 478,
+        "name": "Joystick7Button8",
+        "desc": ""
+      },
+      {
+        "value": 479,
+        "name": "Joystick7Button9",
+        "desc": ""
+      },
+      {
+        "value": 480,
+        "name": "Joystick7Button10",
+        "desc": ""
+      },
+      {
+        "value": 481,
+        "name": "Joystick7Button11",
+        "desc": ""
+      },
+      {
+        "value": 482,
+        "name": "Joystick7Button12",
+        "desc": ""
+      },
+      {
+        "value": 483,
+        "name": "Joystick7Button13",
+        "desc": ""
+      },
+      {
+        "value": 484,
+        "name": "Joystick7Button14",
+        "desc": ""
+      },
+      {
+        "value": 485,
+        "name": "Joystick7Button15",
+        "desc": ""
+      },
+      {
+        "value": 486,
+        "name": "Joystick7Button16",
+        "desc": ""
+      },
+      {
+        "value": 487,
+        "name": "Joystick7Button17",
+        "desc": ""
+      },
+      {
+        "value": 488,
+        "name": "Joystick7Button18",
+        "desc": ""
+      },
+      {
+        "value": 489,
+        "name": "Joystick7Button19",
+        "desc": ""
+      },
+      {
+        "value": 490,
+        "name": "Joystick8Button0",
+        "desc": ""
+      },
+      {
+        "value": 491,
+        "name": "Joystick8Button1",
+        "desc": ""
+      },
+      {
+        "value": 492,
+        "name": "Joystick8Button2",
+        "desc": ""
+      },
+      {
+        "value": 493,
+        "name": "Joystick8Button3",
+        "desc": ""
+      },
+      {
+        "value": 494,
+        "name": "Joystick8Button4",
+        "desc": ""
+      },
+      {
+        "value": 495,
+        "name": "Joystick8Button5",
+        "desc": ""
+      },
+      {
+        "value": 496,
+        "name": "Joystick8Button6",
+        "desc": ""
+      },
+      {
+        "value": 497,
+        "name": "Joystick8Button7",
+        "desc": ""
+      },
+      {
+        "value": 498,
+        "name": "Joystick8Button8",
+        "desc": ""
+      },
+      {
+        "value": 499,
+        "name": "Joystick8Button9",
+        "desc": ""
+      },
+      {
+        "value": 500,
+        "name": "Joystick8Button10",
+        "desc": ""
+      },
+      {
+        "value": 501,
+        "name": "Joystick8Button11",
+        "desc": ""
+      },
+      {
+        "value": 502,
+        "name": "Joystick8Button12",
+        "desc": ""
+      },
+      {
+        "value": 503,
+        "name": "Joystick8Button13",
+        "desc": ""
+      },
+      {
+        "value": 504,
+        "name": "Joystick8Button14",
+        "desc": ""
+      },
+      {
+        "value": 505,
+        "name": "Joystick8Button15",
+        "desc": ""
+      },
+      {
+        "value": 506,
+        "name": "Joystick8Button16",
+        "desc": ""
+      },
+      {
+        "value": 507,
+        "name": "Joystick8Button17",
+        "desc": ""
+      },
+      {
+        "value": 508,
+        "name": "Joystick8Button18",
+        "desc": ""
+      },
+      {
+        "value": 509,
+        "name": "Joystick8Button19",
+        "desc": ""
+      }
+    ],
+    "name": "KeyCode",
+    "desc": ""
+  },
+  {
+    "vars": [
+      {
+        "value": 0,
+        "name": "Red",
+        "desc": ""
+      },
+      {
+        "value": 1,
+        "name": "Blue",
+        "desc": ""
+      },
+      {
+        "value": 2,
+        "name": "Green",
+        "desc": ""
+      },
+      {
+        "value": 3,
+        "name": "Yellow",
+        "desc": ""
+      },
+      {
+        "value": 4,
+        "name": "Purple",
+        "desc": ""
+      },
+      {
+        "value": 5,
+        "name": "Pink",
+        "desc": ""
+      },
+      {
+        "value": 6,
+        "name": "Orange",
+        "desc": ""
+      },
+      {
+        "value": 7,
+        "name": "Cyan",
+        "desc": ""
+      },
+      {
+        "value": 8,
+        "name": "Current",
+        "desc": ""
+      },
+      {
+        "value": 9,
+        "name": "Other",
+        "desc": ""
+      }
+    ],
+    "name": "PlanetType",
+    "desc": ""
+  },
+  {
+    "vars": [
+      {
+        "value": 0,
+        "name": "TooEarly",
+        "desc": ""
+      },
+      {
+        "value": 1,
+        "name": "VeryEarly",
+        "desc": ""
+      },
+      {
+        "value": 2,
+        "name": "EarlyPerfect",
+        "desc": ""
+      },
+      {
+        "value": 3,
+        "name": "Perfect",
+        "desc": ""
+      },
+      {
+        "value": 4,
+        "name": "LatePerfect",
+        "desc": ""
+      },
+      {
+        "value": 5,
+        "name": "VeryLate",
+        "desc": ""
+      },
+      {
+        "value": 6,
+        "name": "TooLate",
+        "desc": ""
+      },
+      {
+        "value": 7,
+        "name": "Multipress",
+        "desc": ""
+      },
+      {
+        "value": 8,
+        "name": "FailMiss",
+        "desc": ""
+      },
+      {
+        "value": 9,
+        "name": "FailOverload",
+        "desc": ""
+      },
+      {
+        "value": 10,
+        "name": "Auto",
+        "desc": ""
+      }
+    ],
+    "name": "Judgement",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "any",
+            "name": "key",
+            "desc": "Key"
+          }
+        ],
+        "retType": "any",
+        "name": "get",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "any",
+            "name": "key",
+            "desc": "Key"
+          },
+          {
+            "type": "any",
+            "name": "value",
+            "desc": "Value"
+          }
+        ],
+        "retType": "any",
+        "name": "set",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "any",
+        "name": "clear",
+        "desc": ""
+      },
+      {
+        "type": "number",
+        "name": "count",
+        "desc": "Element Count"
+      }
+    ],
+    "name": "Dictionary",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "index",
+            "desc": "Index"
+          }
+        ],
+        "retType": "any",
+        "name": "get",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "any",
+            "name": "index",
+            "desc": "Index"
+          },
+          {
+            "type": "any",
+            "name": "value",
+            "desc": "Value"
+          }
+        ],
+        "retType": "any",
+        "name": "set",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "any",
+        "name": "clear",
+        "desc": ""
+      },
+      {
+        "type": "number",
+        "name": "count",
+        "desc": "Element Count"
+      }
+    ],
+    "name": "List",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "x",
+            "desc": ""
+          },
+          {
+            "type": "number",
+            "name": "y",
+            "desc": ""
+          }
+        ],
+        "retType": "Vector2",
+        "name": "Vector2",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "any",
+        "name": "normalize",
+        "desc": ""
+      }
+    ],
+    "name": "Vector2",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "x",
+            "desc": ""
+          },
+          {
+            "type": "number",
+            "name": "y",
+            "desc": ""
+          }
+        ],
+        "retType": "Vector3",
+        "name": "Vector3",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "any",
+        "name": "normalize",
+        "desc": ""
+      }
+    ],
+    "name": "Vector3",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "r",
+            "desc": "Red"
+          },
+          {
+            "type": "number",
+            "name": "g",
+            "desc": "Green"
+          },
+          {
+            "type": "number",
+            "name": "b",
+            "desc": "Blue"
+          },
+          {
+            "type": "number",
+            "name": "a",
+            "desc": "Alpha"
+          }
+        ],
+        "retType": "Color",
+        "name": "Color",
+        "desc": ""
+      }
+    ],
+    "name": "Color",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "h",
+            "desc": "Hue"
+          },
+          {
+            "type": "number",
+            "name": "s",
+            "desc": "Saturation"
+          },
+          {
+            "type": "number",
+            "name": "v",
+            "desc": "Value"
+          }
+        ],
+        "retType": "HSV",
+        "name": "HSV",
+        "desc": ""
+      }
+    ],
+    "name": "HSV",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "key",
+            "desc": "KeyCode"
+          }
+        ],
+        "retType": "number",
+        "name": "getKeyDown",
+        "desc": "Is key down"
+      },
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "key",
+            "desc": "KeyCode"
+          }
+        ],
+        "retType": "number",
+        "name": "getKeyUp",
+        "desc": "Is key up"
+      },
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "key",
+            "desc": "KeyCode"
+          }
+        ],
+        "retType": "number",
+        "name": "getKey",
+        "desc": "Is key up or down"
+      }
+    ],
+    "name": "Input",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "Component",
+            "name": "comp",
+            "desc": "Component"
+          },
+          {
+            "type": "Type",
+            "name": "compType",
+            "desc": "Component Type"
+          }
+        ],
+        "retType": "Component",
+        "name": "getComponent",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Component",
+            "name": "comp",
+            "desc": "Component"
+          },
+          {
+            "type": "Type",
+            "name": "compType",
+            "desc": "Component Type"
+          }
+        ],
+        "retType": "Component",
+        "name": "getComponentInChildren",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Component",
+            "name": "comp",
+            "desc": "Component"
+          },
+          {
+            "type": "Type",
+            "name": "compType",
+            "desc": "Component Type"
+          }
+        ],
+        "retType": "Component",
+        "name": "addComponent",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "clrType",
+            "desc": "CLR Type FullName"
+          }
+        ],
+        "retType": "any",
+        "name": "type",
+        "desc": ""
+      }
+    ],
+    "name": "UnityHelper",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "path",
+            "desc": "Image Path"
+          }
+        ],
+        "retType": "Sprite",
+        "name": "load",
+        "desc": ""
+      }
+    ],
+    "name": "Sprite",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "Sprite",
+            "name": "spr",
+            "desc": ""
+          }
+        ],
+        "retType": "GameObject",
+        "name": "GameObject",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Vector2",
+        "name": "getPosition",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Vector2",
+            "name": "vec2",
+            "desc": ""
+          }
+        ],
+        "retType": "any",
+        "name": "setPosition",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Color",
+        "name": "getColor",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Color",
+            "name": "col",
+            "desc": ""
+          }
+        ],
+        "retType": "any",
+        "name": "setColor",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Vector2",
+        "name": "getSize",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Vector2",
+            "name": "vec2",
+            "desc": ""
+          }
+        ],
+        "retType": "any",
+        "name": "setSize",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Sprite",
+        "name": "getSprite",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Sprite",
+            "name": "spr",
+            "desc": ""
+          }
+        ],
+        "retType": "any",
+        "name": "setSprite",
+        "desc": ""
+      }
+    ],
+    "name": "GameObject",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getDeltaTime",
+        "desc": "UnityEngine.Time.deltaTime"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getFixedTime",
+        "desc": "UnityEngine.Time.fixedTime"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getFixedUnscaledDeltaTime",
+        "desc": "UnityEngine.Time.fixedUnscaledDeltaTime"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getFixedUnscaledTime",
+        "desc": "UnityEngine.Time.fixedUnscaledTime"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getFrameCount",
+        "desc": "UnityEngine.Time.frameCount"
+      }
+    ],
+    "name": "Time",
+    "desc": ""
+  },
+  {
+    "type": "Tiles",
+    "name": "tiles",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "index",
+            "desc": "Index"
+          }
+        ],
+        "retType": "Tile",
+        "name": "get",
+        "desc": ""
+      },
+      {
+        "type": "number",
+        "name": "count",
+        "desc": ""
+      }
+    ],
+    "name": "Tiles",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "timing",
+            "desc": "Hit Timing"
+          },
+          {
+            "type": "number",
+            "name": "xAccuracy",
+            "desc": "XAccuracy"
+          },
+          {
+            "type": "number",
+            "name": "accuracy",
+            "desc": "Accuracy"
+          },
+          {
+            "type": "number",
+            "name": "judgement",
+            "desc": "Hit Judgement"
+          }
+        ],
+        "retType": "Tile",
+        "name": "Tile",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getSeqID",
+        "desc": "Times Sequence ID"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getTiming",
+        "desc": "Hit Timing"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getXAccuracy",
+        "desc": "XAccuracy"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getAccuracy",
+        "desc": "Accuracy"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getJudgement",
+        "desc": "Hit Judgement"
+      }
+    ],
+    "name": "Tile",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "planetType",
+            "desc": "PlanetType"
+          }
+        ],
+        "retType": "Planet",
+        "name": "Planet",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Color",
+        "name": "getColor",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Color",
+            "name": "col",
+            "desc": ""
+          }
+        ],
+        "retType": "any",
+        "name": "setColor",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Sprite",
+        "name": "getSprite",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Sprite",
+            "name": "spr",
+            "desc": ""
+          }
+        ],
+        "retType": "any",
+        "name": "setSprite",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Color",
+        "name": "getSpriteSize",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Vector2",
+            "name": "vec2",
+            "desc": ""
+          }
+        ],
+        "retType": "any",
+        "name": "setSpriteSize",
+        "desc": ""
+      }
+    ],
+    "name": "Planet",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [],
+        "retType": "string",
+        "name": "getCurDir",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "string",
+        "name": "getModDir",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "any",
+            "name": "obj",
+            "desc": "Anything"
+          }
+        ],
+        "retType": "number",
+        "name": "log",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "number",
+        "name": "hit",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "number",
+        "name": "init",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "number",
+        "name": "openLevel",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "number",
+        "name": "sceneLoad",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "number",
+        "name": "update",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "target",
+            "desc": "target; scrController:Awake"
+          },
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "boolean",
+        "name": "prefix",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "target",
+            "desc": "target; scrController:Awake"
+          },
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "boolean",
+        "name": "postfix",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "difficulty",
+            "desc": "Difficulty"
+          },
+          {
+            "type": "number",
+            "name": "pitch",
+            "desc": "Pitch"
+          },
+          {
+            "type": "number",
+            "name": "accuracy",
+            "desc": "Accuracy"
+          },
+          {
+            "type": "number",
+            "name": "totalTiles",
+            "desc": "Total Tiles"
+          }
+        ],
+        "retType": "number",
+        "name": "calculatePP",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "name",
+            "desc": "Variable name"
+          }
+        ],
+        "retType": "any",
+        "name": "getGlobalVariable",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "name",
+            "desc": "Variable name"
+          },
+          {
+            "type": "any",
+            "name": "obj",
+            "desc": "New value"
+          }
+        ],
+        "retType": "any",
+        "name": "setGlobalVariable",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "HSV",
+        "name": "RGBToHSV",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Color",
+        "name": "HSVToRGB",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "planetType",
+            "desc": "Planet Type"
+          }
+        ],
+        "retType": "Planet",
+        "name": "getPlanet",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "clrType",
+            "desc": "Full CLR Type name"
+          }
+        ],
+        "retType": "any",
+        "name": "resolve",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "clrType",
+            "desc": "Full CLR Type name"
+          }
+        ],
+        "retType": "any",
+        "name": "generateProxy",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "name",
+            "desc": "Tag name"
+          },
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "any",
+        "name": "registerTag",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "name",
+            "desc": "Tag name"
+          }
+        ],
+        "retType": "any",
+        "name": "unregisterTag",
+        "desc": ""
+      }
+    ],
+    "name": "Overlayer",
+    "desc": ""
+  }
+]
