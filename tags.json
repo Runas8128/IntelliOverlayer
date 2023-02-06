@@ -2699,7 +2699,7 @@
         "args": [],
         "retType": "any",
         "name": "normalize",
-        "desc": ""
+        "desc": "Normalize This Vector"
       }
     ],
     "name": "Vector2",
@@ -2728,7 +2728,7 @@
         "args": [],
         "retType": "any",
         "name": "normalize",
-        "desc": ""
+        "desc": "Normalize This Vector"
       }
     ],
     "name": "Vector3",
@@ -3448,6 +3448,11 @@
             "type": "Function",
             "name": "func",
             "desc": "Function"
+          },
+          {
+            "type": "boolean",
+            "name": "notplaying",
+            "desc": "Allow For Not Playing"
           }
         ],
         "retType": "any",
