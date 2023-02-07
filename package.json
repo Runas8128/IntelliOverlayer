@@ -11,6 +11,7 @@
   },
   "publisher": "Runas",
   "version": "0.1.0",
+  "icon": "temp_icon.png",
   "engines": {
     "vscode": "^1.74.0"
   },
