@@ -1,4 +1,4 @@
-# IntelliOverlayer (v0.1.0)
+# IntelliOverlayer (v0.1.1)
 
 오버레이어 커스텀태그 작성에 도움을 주는 익스텐션입니다!
 
@@ -31,6 +31,11 @@ ___
 ___
 
 ## Release Notes
+
+### 0.1.1
+
+* 익스텐션 임시 아이콘을 추가했습니다. ||| Added extension icon (temporary)
+    - 임시 아이콘이기 때문에 언제든지 바뀔 수 있습니다. ||| It can be changed at anytime since this is temporary icon
 
 ### 0.1.0
 
