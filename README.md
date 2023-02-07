@@ -2,7 +2,7 @@
 
 오버레이어 커스텀태그 작성에 도움을 주는 익스텐션입니다!
 
-현재 지원하는 태그는 1.35.1 (`Overlayer.registerTag` 함수에 `notplaying` 매개변수 추가) 까지 입니다.
+현재 지원하는 버전은 1.35.1 (`Overlayer.registerTag` 함수에 `notplaying` 매개변수 추가) 까지 입니다.
 
 학업 등의 이슈로 업데이트가 많이 늦어질 수 있습니다.<br><br>
 
