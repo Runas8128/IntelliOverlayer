@@ -52,7 +52,8 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
-    "build": "vsce package --out build/"
+    "build": "vsce package --out build/",
+    "modifytag": "node modifyTags.js"
   },
   "devDependencies": {
     "@types/glob": "^8.0.1",
