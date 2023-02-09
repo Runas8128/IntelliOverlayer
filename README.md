@@ -1,4 +1,4 @@
-# IntelliOverlayer (v0.1.1)
+# IntelliOverlayer (v0.1.2)
 
 오버레이어 커스텀태그 작성에 도움을 주는 익스텐션입니다!
 
@@ -32,9 +32,12 @@ ___
 
 ## Release Notes
 
-### 0.1.1
+### 0.1.2
 
-* 익스텐션 임시 아이콘을 추가했습니다. ||| Added extension icon (temporary)
+* 태그의 설명을 [오버레이어 위키](http://overlayer.info/)의 설명으로 교체했습니다. ||| Replaced tag's descriptions to [Overlayer Wiki](http://overlayer.info/)'s descriptions
+    * 영문 번역은 추후 추가할 예정입니다. ||| English translation will be available soon
+* Tags.json 파일을 위키의 분류에 따라 7+2(`Enum`, `Class`)개의 파일로 분할했습니다.
+Added extension icon (temporary)
     - 임시 아이콘이기 때문에 언제든지 바뀔 수 있습니다. ||| It can be changed at anytime since this is temporary icon
 
 ### 0.1.0
