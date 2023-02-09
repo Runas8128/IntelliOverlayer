@@ -90,7 +90,7 @@ export default class Manager {
 
 type OPayload = {
   name: string;
-  desc: string;
+  desc?: string;
   type?: string;
   value?: number;
   vars?: OPayload[];

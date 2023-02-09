@@ -825,1643 +825,1315 @@
     "vars": [
       {
         "value": 0,
-        "name": "None",
-        "desc": ""
+        "name": "None"
       },
       {
         "value": 8,
-        "name": "Backspace",
-        "desc": ""
+        "name": "Backspace"
       },
       {
         "value": 127,
-        "name": "Delete",
-        "desc": ""
+        "name": "Delete"
       },
       {
         "value": 9,
-        "name": "Tab",
-        "desc": ""
+        "name": "Tab"
       },
       {
         "value": 12,
-        "name": "Clear",
-        "desc": ""
+        "name": "Clear"
       },
       {
         "value": 13,
-        "name": "Return",
-        "desc": ""
+        "name": "Return"
       },
       {
         "value": 19,
-        "name": "Pause",
-        "desc": ""
+        "name": "Pause"
       },
       {
         "value": 27,
-        "name": "Escape",
-        "desc": ""
+        "name": "Escape"
       },
       {
         "value": 32,
-        "name": "Space",
-        "desc": ""
+        "name": "Space"
       },
       {
         "value": 256,
-        "name": "Keypad0",
-        "desc": ""
+        "name": "Keypad0"
       },
       {
         "value": 257,
-        "name": "Keypad1",
-        "desc": ""
+        "name": "Keypad1"
       },
       {
         "value": 258,
-        "name": "Keypad2",
-        "desc": ""
+        "name": "Keypad2"
       },
       {
         "value": 259,
-        "name": "Keypad3",
-        "desc": ""
+        "name": "Keypad3"
       },
       {
         "value": 260,
-        "name": "Keypad4",
-        "desc": ""
+        "name": "Keypad4"
       },
       {
         "value": 261,
-        "name": "Keypad5",
-        "desc": ""
+        "name": "Keypad5"
       },
       {
         "value": 262,
-        "name": "Keypad6",
-        "desc": ""
+        "name": "Keypad6"
       },
       {
         "value": 263,
-        "name": "Keypad7",
-        "desc": ""
+        "name": "Keypad7"
       },
       {
         "value": 264,
-        "name": "Keypad8",
-        "desc": ""
+        "name": "Keypad8"
       },
       {
         "value": 265,
-        "name": "Keypad9",
-        "desc": ""
+        "name": "Keypad9"
       },
       {
         "value": 266,
-        "name": "KeypadPeriod",
-        "desc": ""
+        "name": "KeypadPeriod"
       },
       {
         "value": 267,
-        "name": "KeypadDivide",
-        "desc": ""
+        "name": "KeypadDivide"
       },
       {
         "value": 268,
-        "name": "KeypadMultiply",
-        "desc": ""
+        "name": "KeypadMultiply"
       },
       {
         "value": 269,
-        "name": "KeypadMinus",
-        "desc": ""
+        "name": "KeypadMinus"
       },
       {
         "value": 270,
-        "name": "KeypadPlus",
-        "desc": ""
+        "name": "KeypadPlus"
       },
       {
         "value": 271,
-        "name": "KeypadEnter",
-        "desc": ""
+        "name": "KeypadEnter"
       },
       {
         "value": 272,
-        "name": "KeypadEquals",
-        "desc": ""
+        "name": "KeypadEquals"
       },
       {
         "value": 273,
-        "name": "UpArrow",
-        "desc": ""
+        "name": "UpArrow"
       },
       {
         "value": 274,
-        "name": "DownArrow",
-        "desc": ""
+        "name": "DownArrow"
       },
       {
         "value": 275,
-        "name": "RightArrow",
-        "desc": ""
+        "name": "RightArrow"
       },
       {
         "value": 276,
-        "name": "LeftArrow",
-        "desc": ""
+        "name": "LeftArrow"
       },
       {
         "value": 277,
-        "name": "Insert",
-        "desc": ""
+        "name": "Insert"
       },
       {
         "value": 278,
-        "name": "Home",
-        "desc": ""
+        "name": "Home"
       },
       {
         "value": 279,
-        "name": "End",
-        "desc": ""
+        "name": "End"
       },
       {
         "value": 280,
-        "name": "PageUp",
-        "desc": ""
+        "name": "PageUp"
       },
       {
         "value": 281,
-        "name": "PageDown",
-        "desc": ""
+        "name": "PageDown"
       },
       {
         "value": 282,
-        "name": "F1",
-        "desc": ""
+        "name": "F1"
       },
       {
         "value": 283,
-        "name": "F2",
-        "desc": ""
+        "name": "F2"
       },
       {
         "value": 284,
-        "name": "F3",
-        "desc": ""
+        "name": "F3"
       },
       {
         "value": 285,
-        "name": "F4",
-        "desc": ""
+        "name": "F4"
       },
       {
         "value": 286,
-        "name": "F5",
-        "desc": ""
+        "name": "F5"
       },
       {
         "value": 287,
-        "name": "F6",
-        "desc": ""
+        "name": "F6"
       },
       {
         "value": 288,
-        "name": "F7",
-        "desc": ""
+        "name": "F7"
       },
       {
         "value": 289,
-        "name": "F8",
-        "desc": ""
+        "name": "F8"
       },
       {
         "value": 290,
-        "name": "F9",
-        "desc": ""
+        "name": "F9"
       },
       {
         "value": 291,
-        "name": "F10",
-        "desc": ""
+        "name": "F10"
       },
       {
         "value": 292,
-        "name": "F11",
-        "desc": ""
+        "name": "F11"
       },
       {
         "value": 293,
-        "name": "F12",
-        "desc": ""
+        "name": "F12"
       },
       {
         "value": 294,
-        "name": "F13",
-        "desc": ""
+        "name": "F13"
       },
       {
         "value": 295,
-        "name": "F14",
-        "desc": ""
+        "name": "F14"
       },
       {
         "value": 296,
-        "name": "F15",
-        "desc": ""
+        "name": "F15"
       },
       {
         "value": 48,
-        "name": "Alpha0",
-        "desc": ""
+        "name": "Alpha0"
       },
       {
         "value": 49,
-        "name": "Alpha1",
-        "desc": ""
+        "name": "Alpha1"
       },
       {
         "value": 50,
-        "name": "Alpha2",
-        "desc": ""
+        "name": "Alpha2"
       },
       {
         "value": 51,
-        "name": "Alpha3",
-        "desc": ""
+        "name": "Alpha3"
       },
       {
         "value": 52,
-        "name": "Alpha4",
-        "desc": ""
+        "name": "Alpha4"
       },
       {
         "value": 53,
-        "name": "Alpha5",
-        "desc": ""
+        "name": "Alpha5"
       },
       {
         "value": 54,
-        "name": "Alpha6",
-        "desc": ""
+        "name": "Alpha6"
       },
       {
         "value": 55,
-        "name": "Alpha7",
-        "desc": ""
+        "name": "Alpha7"
       },
       {
         "value": 56,
-        "name": "Alpha8",
-        "desc": ""
+        "name": "Alpha8"
       },
       {
         "value": 57,
-        "name": "Alpha9",
-        "desc": ""
+        "name": "Alpha9"
       },
       {
         "value": 33,
-        "name": "Exclaim",
-        "desc": ""
+        "name": "Exclaim"
       },
       {
         "value": 34,
-        "name": "DoubleQuote",
-        "desc": ""
+        "name": "DoubleQuote"
       },
       {
         "value": 35,
-        "name": "Hash",
-        "desc": ""
+        "name": "Hash"
       },
       {
         "value": 36,
-        "name": "Dollar",
-        "desc": ""
+        "name": "Dollar"
       },
       {
         "value": 37,
-        "name": "Percent",
-        "desc": ""
+        "name": "Percent"
       },
       {
         "value": 38,
-        "name": "Ampersand",
-        "desc": ""
+        "name": "Ampersand"
       },
       {
         "value": 39,
-        "name": "Quote",
-        "desc": ""
+        "name": "Quote"
       },
       {
         "value": 40,
-        "name": "LeftParen",
-        "desc": ""
+        "name": "LeftParen"
       },
       {
         "value": 41,
-        "name": "RightParen",
-        "desc": ""
+        "name": "RightParen"
       },
       {
         "value": 42,
-        "name": "Asterisk",
-        "desc": ""
+        "name": "Asterisk"
       },
       {
         "value": 43,
-        "name": "Plus",
-        "desc": ""
+        "name": "Plus"
       },
       {
         "value": 44,
-        "name": "Comma",
-        "desc": ""
+        "name": "Comma"
       },
       {
         "value": 45,
-        "name": "Minus",
-        "desc": ""
+        "name": "Minus"
       },
       {
         "value": 46,
-        "name": "Period",
-        "desc": ""
+        "name": "Period"
       },
       {
         "value": 47,
-        "name": "Slash",
-        "desc": ""
+        "name": "Slash"
       },
       {
         "value": 58,
-        "name": "Colon",
-        "desc": ""
+        "name": "Colon"
       },
       {
         "value": 59,
-        "name": "Semicolon",
-        "desc": ""
+        "name": "Semicolon"
       },
       {
         "value": 60,
-        "name": "Less",
-        "desc": ""
+        "name": "Less"
       },
       {
         "value": 61,
-        "name": "Equals",
-        "desc": ""
+        "name": "Equals"
       },
       {
         "value": 62,
-        "name": "Greater",
-        "desc": ""
+        "name": "Greater"
       },
       {
         "value": 63,
-        "name": "Question",
-        "desc": ""
+        "name": "Question"
       },
       {
         "value": 64,
-        "name": "At",
-        "desc": ""
+        "name": "At"
       },
       {
         "value": 91,
-        "name": "LeftBracket",
-        "desc": ""
+        "name": "LeftBracket"
       },
       {
         "value": 92,
-        "name": "Backslash",
-        "desc": ""
+        "name": "Backslash"
       },
       {
         "value": 93,
-        "name": "RightBracket",
-        "desc": ""
+        "name": "RightBracket"
       },
       {
         "value": 94,
-        "name": "Caret",
-        "desc": ""
+        "name": "Caret"
       },
       {
         "value": 95,
-        "name": "Underscore",
-        "desc": ""
+        "name": "Underscore"
       },
       {
         "value": 96,
-        "name": "BackQuote",
-        "desc": ""
+        "name": "BackQuote"
       },
       {
         "value": 97,
-        "name": "A",
-        "desc": ""
+        "name": "A"
       },
       {
         "value": 98,
-        "name": "B",
-        "desc": ""
+        "name": "B"
       },
       {
         "value": 99,
-        "name": "C",
-        "desc": ""
+        "name": "C"
       },
       {
         "value": 100,
-        "name": "D",
-        "desc": ""
+        "name": "D"
       },
       {
         "value": 101,
-        "name": "E",
-        "desc": ""
+        "name": "E"
       },
       {
         "value": 102,
-        "name": "F",
-        "desc": ""
+        "name": "F"
       },
       {
         "value": 103,
-        "name": "G",
-        "desc": ""
+        "name": "G"
       },
       {
         "value": 104,
-        "name": "H",
-        "desc": ""
+        "name": "H"
       },
       {
         "value": 105,
-        "name": "I",
-        "desc": ""
+        "name": "I"
       },
       {
         "value": 106,
-        "name": "J",
-        "desc": ""
+        "name": "J"
       },
       {
         "value": 107,
-        "name": "K",
-        "desc": ""
+        "name": "K"
       },
       {
         "value": 108,
-        "name": "L",
-        "desc": ""
+        "name": "L"
       },
       {
         "value": 109,
-        "name": "M",
-        "desc": ""
+        "name": "M"
       },
       {
         "value": 110,
-        "name": "N",
-        "desc": ""
+        "name": "N"
       },
       {
         "value": 111,
-        "name": "O",
-        "desc": ""
+        "name": "O"
       },
       {
         "value": 112,
-        "name": "P",
-        "desc": ""
+        "name": "P"
       },
       {
         "value": 113,
-        "name": "Q",
-        "desc": ""
+        "name": "Q"
       },
       {
         "value": 114,
-        "name": "R",
-        "desc": ""
+        "name": "R"
       },
       {
         "value": 115,
-        "name": "S",
-        "desc": ""
+        "name": "S"
       },
       {
         "value": 116,
-        "name": "T",
-        "desc": ""
+        "name": "T"
       },
       {
         "value": 117,
-        "name": "U",
-        "desc": ""
+        "name": "U"
       },
       {
         "value": 118,
-        "name": "V",
-        "desc": ""
+        "name": "V"
       },
       {
         "value": 119,
-        "name": "W",
-        "desc": ""
+        "name": "W"
       },
       {
         "value": 120,
-        "name": "X",
-        "desc": ""
+        "name": "X"
       },
       {
         "value": 121,
-        "name": "Y",
-        "desc": ""
+        "name": "Y"
       },
       {
         "value": 122,
-        "name": "Z",
-        "desc": ""
+        "name": "Z"
       },
       {
         "value": 123,
-        "name": "LeftCurlyBracket",
-        "desc": ""
+        "name": "LeftCurlyBracket"
       },
       {
         "value": 124,
-        "name": "Pipe",
-        "desc": ""
+        "name": "Pipe"
       },
       {
         "value": 125,
-        "name": "RightCurlyBracket",
-        "desc": ""
+        "name": "RightCurlyBracket"
       },
       {
         "value": 126,
-        "name": "Tilde",
-        "desc": ""
+        "name": "Tilde"
       },
       {
         "value": 300,
-        "name": "Numlock",
-        "desc": ""
+        "name": "Numlock"
       },
       {
         "value": 301,
-        "name": "CapsLock",
-        "desc": ""
+        "name": "CapsLock"
       },
       {
         "value": 302,
-        "name": "ScrollLock",
-        "desc": ""
+        "name": "ScrollLock"
       },
       {
         "value": 303,
-        "name": "RightShift",
-        "desc": ""
+        "name": "RightShift"
       },
       {
         "value": 304,
-        "name": "LeftShift",
-        "desc": ""
+        "name": "LeftShift"
       },
       {
         "value": 305,
-        "name": "RightControl",
-        "desc": ""
+        "name": "RightControl"
       },
       {
         "value": 306,
-        "name": "LeftControl",
-        "desc": ""
+        "name": "LeftControl"
       },
       {
         "value": 307,
-        "name": "RightAlt",
-        "desc": ""
+        "name": "RightAlt"
       },
       {
         "value": 308,
-        "name": "LeftAlt",
-        "desc": ""
+        "name": "LeftAlt"
       },
       {
         "value": 310,
-        "name": "LeftMeta",
-        "desc": ""
+        "name": "LeftMeta"
       },
       {
         "value": 310,
-        "name": "LeftCommand",
-        "desc": ""
+        "name": "LeftCommand"
       },
       {
         "value": 310,
-        "name": "LeftApple",
-        "desc": ""
+        "name": "LeftApple"
       },
       {
         "value": 311,
-        "name": "LeftWindows",
-        "desc": ""
+        "name": "LeftWindows"
       },
       {
         "value": 309,
-        "name": "RightMeta",
-        "desc": ""
+        "name": "RightMeta"
       },
       {
         "value": 309,
-        "name": "RightCommand",
-        "desc": ""
+        "name": "RightCommand"
       },
       {
         "value": 309,
-        "name": "RightApple",
-        "desc": ""
+        "name": "RightApple"
       },
       {
         "value": 312,
-        "name": "RightWindows",
-        "desc": ""
+        "name": "RightWindows"
       },
       {
         "value": 313,
-        "name": "AltGr",
-        "desc": ""
+        "name": "AltGr"
       },
       {
         "value": 315,
-        "name": "Help",
-        "desc": ""
+        "name": "Help"
       },
       {
         "value": 316,
-        "name": "Print",
-        "desc": ""
+        "name": "Print"
       },
       {
         "value": 317,
-        "name": "SysReq",
-        "desc": ""
+        "name": "SysReq"
       },
       {
         "value": 318,
-        "name": "Break",
-        "desc": ""
+        "name": "Break"
       },
       {
         "value": 319,
-        "name": "Menu",
-        "desc": ""
+        "name": "Menu"
       },
       {
         "value": 323,
-        "name": "Mouse0",
-        "desc": ""
+        "name": "Mouse0"
       },
       {
         "value": 324,
-        "name": "Mouse1",
-        "desc": ""
+        "name": "Mouse1"
       },
       {
         "value": 325,
-        "name": "Mouse2",
-        "desc": ""
+        "name": "Mouse2"
       },
       {
         "value": 326,
-        "name": "Mouse3",
-        "desc": ""
+        "name": "Mouse3"
       },
       {
         "value": 327,
-        "name": "Mouse4",
-        "desc": ""
+        "name": "Mouse4"
       },
       {
         "value": 328,
-        "name": "Mouse5",
-        "desc": ""
+        "name": "Mouse5"
       },
       {
         "value": 329,
-        "name": "Mouse6",
-        "desc": ""
+        "name": "Mouse6"
       },
       {
         "value": 330,
-        "name": "JoystickButton0",
-        "desc": ""
+        "name": "JoystickButton0"
       },
       {
         "value": 331,
-        "name": "JoystickButton1",
-        "desc": ""
+        "name": "JoystickButton1"
       },
       {
         "value": 332,
-        "name": "JoystickButton2",
-        "desc": ""
+        "name": "JoystickButton2"
       },
       {
         "value": 333,
-        "name": "JoystickButton3",
-        "desc": ""
+        "name": "JoystickButton3"
       },
       {
         "value": 334,
-        "name": "JoystickButton4",
-        "desc": ""
+        "name": "JoystickButton4"
       },
       {
         "value": 335,
-        "name": "JoystickButton5",
-        "desc": ""
+        "name": "JoystickButton5"
       },
       {
         "value": 336,
-        "name": "JoystickButton6",
-        "desc": ""
+        "name": "JoystickButton6"
       },
       {
         "value": 337,
-        "name": "JoystickButton7",
-        "desc": ""
+        "name": "JoystickButton7"
       },
       {
         "value": 338,
-        "name": "JoystickButton8",
-        "desc": ""
+        "name": "JoystickButton8"
       },
       {
         "value": 339,
-        "name": "JoystickButton9",
-        "desc": ""
+        "name": "JoystickButton9"
       },
       {
         "value": 340,
-        "name": "JoystickButton10",
-        "desc": ""
+        "name": "JoystickButton10"
       },
       {
         "value": 341,
-        "name": "JoystickButton11",
-        "desc": ""
+        "name": "JoystickButton11"
       },
       {
         "value": 342,
-        "name": "JoystickButton12",
-        "desc": ""
+        "name": "JoystickButton12"
       },
       {
         "value": 343,
-        "name": "JoystickButton13",
-        "desc": ""
+        "name": "JoystickButton13"
       },
       {
         "value": 344,
-        "name": "JoystickButton14",
-        "desc": ""
+        "name": "JoystickButton14"
       },
       {
         "value": 345,
-        "name": "JoystickButton15",
-        "desc": ""
+        "name": "JoystickButton15"
       },
       {
         "value": 346,
-        "name": "JoystickButton16",
-        "desc": ""
+        "name": "JoystickButton16"
       },
       {
         "value": 347,
-        "name": "JoystickButton17",
-        "desc": ""
+        "name": "JoystickButton17"
       },
       {
         "value": 348,
-        "name": "JoystickButton18",
-        "desc": ""
+        "name": "JoystickButton18"
       },
       {
         "value": 349,
-        "name": "JoystickButton19",
-        "desc": ""
+        "name": "JoystickButton19"
       },
       {
         "value": 350,
-        "name": "Joystick1Button0",
-        "desc": ""
+        "name": "Joystick1Button0"
       },
       {
         "value": 351,
-        "name": "Joystick1Button1",
-        "desc": ""
+        "name": "Joystick1Button1"
       },
       {
         "value": 352,
-        "name": "Joystick1Button2",
-        "desc": ""
+        "name": "Joystick1Button2"
       },
       {
         "value": 353,
-        "name": "Joystick1Button3",
-        "desc": ""
+        "name": "Joystick1Button3"
       },
       {
         "value": 354,
-        "name": "Joystick1Button4",
-        "desc": ""
+        "name": "Joystick1Button4"
       },
       {
         "value": 355,
-        "name": "Joystick1Button5",
-        "desc": ""
+        "name": "Joystick1Button5"
       },
       {
         "value": 356,
-        "name": "Joystick1Button6",
-        "desc": ""
+        "name": "Joystick1Button6"
       },
       {
         "value": 357,
-        "name": "Joystick1Button7",
-        "desc": ""
+        "name": "Joystick1Button7"
       },
       {
         "value": 358,
-        "name": "Joystick1Button8",
-        "desc": ""
+        "name": "Joystick1Button8"
       },
       {
         "value": 359,
-        "name": "Joystick1Button9",
-        "desc": ""
+        "name": "Joystick1Button9"
       },
       {
         "value": 360,
-        "name": "Joystick1Button10",
-        "desc": ""
+        "name": "Joystick1Button10"
       },
       {
         "value": 361,
-        "name": "Joystick1Button11",
-        "desc": ""
+        "name": "Joystick1Button11"
       },
       {
         "value": 362,
-        "name": "Joystick1Button12",
-        "desc": ""
+        "name": "Joystick1Button12"
       },
       {
         "value": 363,
-        "name": "Joystick1Button13",
-        "desc": ""
+        "name": "Joystick1Button13"
       },
       {
         "value": 364,
-        "name": "Joystick1Button14",
-        "desc": ""
+        "name": "Joystick1Button14"
       },
       {
         "value": 365,
-        "name": "Joystick1Button15",
-        "desc": ""
+        "name": "Joystick1Button15"
       },
       {
         "value": 366,
-        "name": "Joystick1Button16",
-        "desc": ""
+        "name": "Joystick1Button16"
       },
       {
         "value": 367,
-        "name": "Joystick1Button17",
-        "desc": ""
+        "name": "Joystick1Button17"
       },
       {
         "value": 368,
-        "name": "Joystick1Button18",
-        "desc": ""
+        "name": "Joystick1Button18"
       },
       {
         "value": 369,
-        "name": "Joystick1Button19",
-        "desc": ""
+        "name": "Joystick1Button19"
       },
       {
         "value": 370,
-        "name": "Joystick2Button0",
-        "desc": ""
+        "name": "Joystick2Button0"
       },
       {
         "value": 371,
-        "name": "Joystick2Button1",
-        "desc": ""
+        "name": "Joystick2Button1"
       },
       {
         "value": 372,
-        "name": "Joystick2Button2",
-        "desc": ""
+        "name": "Joystick2Button2"
       },
       {
         "value": 373,
-        "name": "Joystick2Button3",
-        "desc": ""
+        "name": "Joystick2Button3"
       },
       {
         "value": 374,
-        "name": "Joystick2Button4",
-        "desc": ""
+        "name": "Joystick2Button4"
       },
       {
         "value": 375,
-        "name": "Joystick2Button5",
-        "desc": ""
+        "name": "Joystick2Button5"
       },
       {
         "value": 376,
-        "name": "Joystick2Button6",
-        "desc": ""
+        "name": "Joystick2Button6"
       },
       {
         "value": 377,
-        "name": "Joystick2Button7",
-        "desc": ""
+        "name": "Joystick2Button7"
       },
       {
         "value": 378,
-        "name": "Joystick2Button8",
-        "desc": ""
+        "name": "Joystick2Button8"
       },
       {
         "value": 379,
-        "name": "Joystick2Button9",
-        "desc": ""
+        "name": "Joystick2Button9"
       },
       {
         "value": 380,
-        "name": "Joystick2Button10",
-        "desc": ""
+        "name": "Joystick2Button10"
       },
       {
         "value": 381,
-        "name": "Joystick2Button11",
-        "desc": ""
+        "name": "Joystick2Button11"
       },
       {
         "value": 382,
-        "name": "Joystick2Button12",
-        "desc": ""
+        "name": "Joystick2Button12"
       },
       {
         "value": 383,
-        "name": "Joystick2Button13",
-        "desc": ""
+        "name": "Joystick2Button13"
       },
       {
         "value": 384,
-        "name": "Joystick2Button14",
-        "desc": ""
+        "name": "Joystick2Button14"
       },
       {
         "value": 385,
-        "name": "Joystick2Button15",
-        "desc": ""
+        "name": "Joystick2Button15"
       },
       {
         "value": 386,
-        "name": "Joystick2Button16",
-        "desc": ""
+        "name": "Joystick2Button16"
       },
       {
         "value": 387,
-        "name": "Joystick2Button17",
-        "desc": ""
+        "name": "Joystick2Button17"
       },
       {
         "value": 388,
-        "name": "Joystick2Button18",
-        "desc": ""
+        "name": "Joystick2Button18"
       },
       {
         "value": 389,
-        "name": "Joystick2Button19",
-        "desc": ""
+        "name": "Joystick2Button19"
       },
       {
         "value": 390,
-        "name": "Joystick3Button0",
-        "desc": ""
+        "name": "Joystick3Button0"
       },
       {
         "value": 391,
-        "name": "Joystick3Button1",
-        "desc": ""
+        "name": "Joystick3Button1"
       },
       {
         "value": 392,
-        "name": "Joystick3Button2",
-        "desc": ""
+        "name": "Joystick3Button2"
       },
       {
         "value": 393,
-        "name": "Joystick3Button3",
-        "desc": ""
+        "name": "Joystick3Button3"
       },
       {
         "value": 394,
-        "name": "Joystick3Button4",
-        "desc": ""
+        "name": "Joystick3Button4"
       },
       {
         "value": 395,
-        "name": "Joystick3Button5",
-        "desc": ""
+        "name": "Joystick3Button5"
       },
       {
         "value": 396,
-        "name": "Joystick3Button6",
-        "desc": ""
+        "name": "Joystick3Button6"
       },
       {
         "value": 397,
-        "name": "Joystick3Button7",
-        "desc": ""
+        "name": "Joystick3Button7"
       },
       {
         "value": 398,
-        "name": "Joystick3Button8",
-        "desc": ""
+        "name": "Joystick3Button8"
       },
       {
         "value": 399,
-        "name": "Joystick3Button9",
-        "desc": ""
+        "name": "Joystick3Button9"
       },
       {
         "value": 400,
-        "name": "Joystick3Button10",
-        "desc": ""
+        "name": "Joystick3Button10"
       },
       {
         "value": 401,
-        "name": "Joystick3Button11",
-        "desc": ""
+        "name": "Joystick3Button11"
       },
       {
         "value": 402,
-        "name": "Joystick3Button12",
-        "desc": ""
+        "name": "Joystick3Button12"
       },
       {
         "value": 403,
-        "name": "Joystick3Button13",
-        "desc": ""
+        "name": "Joystick3Button13"
       },
       {
         "value": 404,
-        "name": "Joystick3Button14",
-        "desc": ""
+        "name": "Joystick3Button14"
       },
       {
         "value": 405,
-        "name": "Joystick3Button15",
-        "desc": ""
+        "name": "Joystick3Button15"
       },
       {
         "value": 406,
-        "name": "Joystick3Button16",
-        "desc": ""
+        "name": "Joystick3Button16"
       },
       {
         "value": 407,
-        "name": "Joystick3Button17",
-        "desc": ""
+        "name": "Joystick3Button17"
       },
       {
         "value": 408,
-        "name": "Joystick3Button18",
-        "desc": ""
+        "name": "Joystick3Button18"
       },
       {
         "value": 409,
-        "name": "Joystick3Button19",
-        "desc": ""
+        "name": "Joystick3Button19"
       },
       {
         "value": 410,
-        "name": "Joystick4Button0",
-        "desc": ""
+        "name": "Joystick4Button0"
       },
       {
         "value": 411,
-        "name": "Joystick4Button1",
-        "desc": ""
+        "name": "Joystick4Button1"
       },
       {
         "value": 412,
-        "name": "Joystick4Button2",
-        "desc": ""
+        "name": "Joystick4Button2"
       },
       {
         "value": 413,
-        "name": "Joystick4Button3",
-        "desc": ""
+        "name": "Joystick4Button3"
       },
       {
         "value": 414,
-        "name": "Joystick4Button4",
-        "desc": ""
+        "name": "Joystick4Button4"
       },
       {
         "value": 415,
-        "name": "Joystick4Button5",
-        "desc": ""
+        "name": "Joystick4Button5"
       },
       {
         "value": 416,
-        "name": "Joystick4Button6",
-        "desc": ""
+        "name": "Joystick4Button6"
       },
       {
         "value": 417,
-        "name": "Joystick4Button7",
-        "desc": ""
+        "name": "Joystick4Button7"
       },
       {
         "value": 418,
-        "name": "Joystick4Button8",
-        "desc": ""
+        "name": "Joystick4Button8"
       },
       {
         "value": 419,
-        "name": "Joystick4Button9",
-        "desc": ""
+        "name": "Joystick4Button9"
       },
       {
         "value": 420,
-        "name": "Joystick4Button10",
-        "desc": ""
+        "name": "Joystick4Button10"
       },
       {
         "value": 421,
-        "name": "Joystick4Button11",
-        "desc": ""
+        "name": "Joystick4Button11"
       },
       {
         "value": 422,
-        "name": "Joystick4Button12",
-        "desc": ""
+        "name": "Joystick4Button12"
       },
       {
         "value": 423,
-        "name": "Joystick4Button13",
-        "desc": ""
+        "name": "Joystick4Button13"
       },
       {
         "value": 424,
-        "name": "Joystick4Button14",
-        "desc": ""
+        "name": "Joystick4Button14"
       },
       {
         "value": 425,
-        "name": "Joystick4Button15",
-        "desc": ""
+        "name": "Joystick4Button15"
       },
       {
         "value": 426,
-        "name": "Joystick4Button16",
-        "desc": ""
+        "name": "Joystick4Button16"
       },
       {
         "value": 427,
-        "name": "Joystick4Button17",
-        "desc": ""
+        "name": "Joystick4Button17"
       },
       {
         "value": 428,
-        "name": "Joystick4Button18",
-        "desc": ""
+        "name": "Joystick4Button18"
       },
       {
         "value": 429,
-        "name": "Joystick4Button19",
-        "desc": ""
+        "name": "Joystick4Button19"
       },
       {
         "value": 430,
-        "name": "Joystick5Button0",
-        "desc": ""
+        "name": "Joystick5Button0"
       },
       {
         "value": 431,
-        "name": "Joystick5Button1",
-        "desc": ""
+        "name": "Joystick5Button1"
       },
       {
         "value": 432,
-        "name": "Joystick5Button2",
-        "desc": ""
+        "name": "Joystick5Button2"
       },
       {
         "value": 433,
-        "name": "Joystick5Button3",
-        "desc": ""
+        "name": "Joystick5Button3"
       },
       {
         "value": 434,
-        "name": "Joystick5Button4",
-        "desc": ""
+        "name": "Joystick5Button4"
       },
       {
         "value": 435,
-        "name": "Joystick5Button5",
-        "desc": ""
+        "name": "Joystick5Button5"
       },
       {
         "value": 436,
-        "name": "Joystick5Button6",
-        "desc": ""
+        "name": "Joystick5Button6"
       },
       {
         "value": 437,
-        "name": "Joystick5Button7",
-        "desc": ""
+        "name": "Joystick5Button7"
       },
       {
         "value": 438,
-        "name": "Joystick5Button8",
-        "desc": ""
+        "name": "Joystick5Button8"
       },
       {
         "value": 439,
-        "name": "Joystick5Button9",
-        "desc": ""
+        "name": "Joystick5Button9"
       },
       {
         "value": 440,
-        "name": "Joystick5Button10",
-        "desc": ""
+        "name": "Joystick5Button10"
       },
       {
         "value": 441,
-        "name": "Joystick5Button11",
-        "desc": ""
+        "name": "Joystick5Button11"
       },
       {
         "value": 442,
-        "name": "Joystick5Button12",
-        "desc": ""
+        "name": "Joystick5Button12"
       },
       {
         "value": 443,
-        "name": "Joystick5Button13",
-        "desc": ""
+        "name": "Joystick5Button13"
       },
       {
         "value": 444,
-        "name": "Joystick5Button14",
-        "desc": ""
+        "name": "Joystick5Button14"
       },
       {
         "value": 445,
-        "name": "Joystick5Button15",
-        "desc": ""
+        "name": "Joystick5Button15"
       },
       {
         "value": 446,
-        "name": "Joystick5Button16",
-        "desc": ""
+        "name": "Joystick5Button16"
       },
       {
         "value": 447,
-        "name": "Joystick5Button17",
-        "desc": ""
+        "name": "Joystick5Button17"
       },
       {
         "value": 448,
-        "name": "Joystick5Button18",
-        "desc": ""
+        "name": "Joystick5Button18"
       },
       {
         "value": 449,
-        "name": "Joystick5Button19",
-        "desc": ""
+        "name": "Joystick5Button19"
       },
       {
         "value": 450,
-        "name": "Joystick6Button0",
-        "desc": ""
+        "name": "Joystick6Button0"
       },
       {
         "value": 451,
-        "name": "Joystick6Button1",
-        "desc": ""
+        "name": "Joystick6Button1"
       },
       {
         "value": 452,
-        "name": "Joystick6Button2",
-        "desc": ""
+        "name": "Joystick6Button2"
       },
       {
         "value": 453,
-        "name": "Joystick6Button3",
-        "desc": ""
+        "name": "Joystick6Button3"
       },
       {
         "value": 454,
-        "name": "Joystick6Button4",
-        "desc": ""
+        "name": "Joystick6Button4"
       },
       {
         "value": 455,
-        "name": "Joystick6Button5",
-        "desc": ""
+        "name": "Joystick6Button5"
       },
       {
         "value": 456,
-        "name": "Joystick6Button6",
-        "desc": ""
+        "name": "Joystick6Button6"
       },
       {
         "value": 457,
-        "name": "Joystick6Button7",
-        "desc": ""
+        "name": "Joystick6Button7"
       },
       {
         "value": 458,
-        "name": "Joystick6Button8",
-        "desc": ""
+        "name": "Joystick6Button8"
       },
       {
         "value": 459,
-        "name": "Joystick6Button9",
-        "desc": ""
+        "name": "Joystick6Button9"
       },
       {
         "value": 460,
-        "name": "Joystick6Button10",
-        "desc": ""
+        "name": "Joystick6Button10"
       },
       {
         "value": 461,
-        "name": "Joystick6Button11",
-        "desc": ""
+        "name": "Joystick6Button11"
       },
       {
         "value": 462,
-        "name": "Joystick6Button12",
-        "desc": ""
+        "name": "Joystick6Button12"
       },
       {
         "value": 463,
-        "name": "Joystick6Button13",
-        "desc": ""
+        "name": "Joystick6Button13"
       },
       {
         "value": 464,
-        "name": "Joystick6Button14",
-        "desc": ""
+        "name": "Joystick6Button14"
       },
       {
         "value": 465,
-        "name": "Joystick6Button15",
-        "desc": ""
+        "name": "Joystick6Button15"
       },
       {
         "value": 466,
-        "name": "Joystick6Button16",
-        "desc": ""
+        "name": "Joystick6Button16"
       },
       {
         "value": 467,
-        "name": "Joystick6Button17",
-        "desc": ""
+        "name": "Joystick6Button17"
       },
       {
         "value": 468,
-        "name": "Joystick6Button18",
-        "desc": ""
+        "name": "Joystick6Button18"
       },
       {
         "value": 469,
-        "name": "Joystick6Button19",
-        "desc": ""
+        "name": "Joystick6Button19"
       },
       {
         "value": 470,
-        "name": "Joystick7Button0",
-        "desc": ""
+        "name": "Joystick7Button0"
       },
       {
         "value": 471,
-        "name": "Joystick7Button1",
-        "desc": ""
+        "name": "Joystick7Button1"
       },
       {
         "value": 472,
-        "name": "Joystick7Button2",
-        "desc": ""
+        "name": "Joystick7Button2"
       },
       {
         "value": 473,
-        "name": "Joystick7Button3",
-        "desc": ""
+        "name": "Joystick7Button3"
       },
       {
         "value": 474,
-        "name": "Joystick7Button4",
-        "desc": ""
+        "name": "Joystick7Button4"
       },
       {
         "value": 475,
-        "name": "Joystick7Button5",
-        "desc": ""
+        "name": "Joystick7Button5"
       },
       {
         "value": 476,
-        "name": "Joystick7Button6",
-        "desc": ""
+        "name": "Joystick7Button6"
       },
       {
         "value": 477,
-        "name": "Joystick7Button7",
-        "desc": ""
+        "name": "Joystick7Button7"
       },
       {
         "value": 478,
-        "name": "Joystick7Button8",
-        "desc": ""
+        "name": "Joystick7Button8"
       },
       {
         "value": 479,
-        "name": "Joystick7Button9",
-        "desc": ""
+        "name": "Joystick7Button9"
       },
       {
         "value": 480,
-        "name": "Joystick7Button10",
-        "desc": ""
+        "name": "Joystick7Button10"
       },
       {
         "value": 481,
-        "name": "Joystick7Button11",
-        "desc": ""
+        "name": "Joystick7Button11"
       },
       {
         "value": 482,
-        "name": "Joystick7Button12",
-        "desc": ""
+        "name": "Joystick7Button12"
       },
       {
         "value": 483,
-        "name": "Joystick7Button13",
-        "desc": ""
+        "name": "Joystick7Button13"
       },
       {
         "value": 484,
-        "name": "Joystick7Button14",
-        "desc": ""
+        "name": "Joystick7Button14"
       },
       {
         "value": 485,
-        "name": "Joystick7Button15",
-        "desc": ""
+        "name": "Joystick7Button15"
       },
       {
         "value": 486,
-        "name": "Joystick7Button16",
-        "desc": ""
+        "name": "Joystick7Button16"
       },
       {
         "value": 487,
-        "name": "Joystick7Button17",
-        "desc": ""
+        "name": "Joystick7Button17"
       },
       {
         "value": 488,
-        "name": "Joystick7Button18",
-        "desc": ""
+        "name": "Joystick7Button18"
       },
       {
         "value": 489,
-        "name": "Joystick7Button19",
-        "desc": ""
+        "name": "Joystick7Button19"
       },
       {
         "value": 490,
-        "name": "Joystick8Button0",
-        "desc": ""
+        "name": "Joystick8Button0"
       },
       {
         "value": 491,
-        "name": "Joystick8Button1",
-        "desc": ""
+        "name": "Joystick8Button1"
       },
       {
         "value": 492,
-        "name": "Joystick8Button2",
-        "desc": ""
+        "name": "Joystick8Button2"
       },
       {
         "value": 493,
-        "name": "Joystick8Button3",
-        "desc": ""
+        "name": "Joystick8Button3"
       },
       {
         "value": 494,
-        "name": "Joystick8Button4",
-        "desc": ""
+        "name": "Joystick8Button4"
       },
       {
         "value": 495,
-        "name": "Joystick8Button5",
-        "desc": ""
+        "name": "Joystick8Button5"
       },
       {
         "value": 496,
-        "name": "Joystick8Button6",
-        "desc": ""
+        "name": "Joystick8Button6"
       },
       {
         "value": 497,
-        "name": "Joystick8Button7",
-        "desc": ""
+        "name": "Joystick8Button7"
       },
       {
         "value": 498,
-        "name": "Joystick8Button8",
-        "desc": ""
+        "name": "Joystick8Button8"
       },
       {
         "value": 499,
-        "name": "Joystick8Button9",
-        "desc": ""
+        "name": "Joystick8Button9"
       },
       {
         "value": 500,
-        "name": "Joystick8Button10",
-        "desc": ""
+        "name": "Joystick8Button10"
       },
       {
         "value": 501,
-        "name": "Joystick8Button11",
-        "desc": ""
+        "name": "Joystick8Button11"
       },
       {
         "value": 502,
-        "name": "Joystick8Button12",
-        "desc": ""
+        "name": "Joystick8Button12"
       },
       {
         "value": 503,
-        "name": "Joystick8Button13",
-        "desc": ""
+        "name": "Joystick8Button13"
       },
       {
         "value": 504,
-        "name": "Joystick8Button14",
-        "desc": ""
+        "name": "Joystick8Button14"
       },
       {
         "value": 505,
-        "name": "Joystick8Button15",
-        "desc": ""
+        "name": "Joystick8Button15"
       },
       {
         "value": 506,
-        "name": "Joystick8Button16",
-        "desc": ""
+        "name": "Joystick8Button16"
       },
       {
         "value": 507,
-        "name": "Joystick8Button17",
-        "desc": ""
+        "name": "Joystick8Button17"
       },
       {
         "value": 508,
-        "name": "Joystick8Button18",
-        "desc": ""
+        "name": "Joystick8Button18"
       },
       {
         "value": 509,
-        "name": "Joystick8Button19",
-        "desc": ""
+        "name": "Joystick8Button19"
       }
     ],
     "name": "KeyCode",
@@ -2471,53 +2143,43 @@
     "vars": [
       {
         "value": 0,
-        "name": "Red",
-        "desc": ""
+        "name": "Red"
       },
       {
         "value": 1,
-        "name": "Blue",
-        "desc": ""
+        "name": "Blue"
       },
       {
         "value": 2,
-        "name": "Green",
-        "desc": ""
+        "name": "Green"
       },
       {
         "value": 3,
-        "name": "Yellow",
-        "desc": ""
+        "name": "Yellow"
       },
       {
         "value": 4,
-        "name": "Purple",
-        "desc": ""
+        "name": "Purple"
       },
       {
         "value": 5,
-        "name": "Pink",
-        "desc": ""
+        "name": "Pink"
       },
       {
         "value": 6,
-        "name": "Orange",
-        "desc": ""
+        "name": "Orange"
       },
       {
         "value": 7,
-        "name": "Cyan",
-        "desc": ""
+        "name": "Cyan"
       },
       {
         "value": 8,
-        "name": "Current",
-        "desc": ""
+        "name": "Current"
       },
       {
         "value": 9,
-        "name": "Other",
-        "desc": ""
+        "name": "Other"
       }
     ],
     "name": "PlanetType",
@@ -2527,58 +2189,47 @@
     "vars": [
       {
         "value": 0,
-        "name": "TooEarly",
-        "desc": ""
+        "name": "TooEarly"
       },
       {
         "value": 1,
-        "name": "VeryEarly",
-        "desc": ""
+        "name": "VeryEarly"
       },
       {
         "value": 2,
-        "name": "EarlyPerfect",
-        "desc": ""
+        "name": "EarlyPerfect"
       },
       {
         "value": 3,
-        "name": "Perfect",
-        "desc": ""
+        "name": "Perfect"
       },
       {
         "value": 4,
-        "name": "LatePerfect",
-        "desc": ""
+        "name": "LatePerfect"
       },
       {
         "value": 5,
-        "name": "VeryLate",
-        "desc": ""
+        "name": "VeryLate"
       },
       {
         "value": 6,
-        "name": "TooLate",
-        "desc": ""
+        "name": "TooLate"
       },
       {
         "value": 7,
-        "name": "Multipress",
-        "desc": ""
+        "name": "Multipress"
       },
       {
         "value": 8,
-        "name": "FailMiss",
-        "desc": ""
+        "name": "FailMiss"
       },
       {
         "value": 9,
-        "name": "FailOverload",
-        "desc": ""
+        "name": "FailOverload"
       },
       {
         "value": 10,
-        "name": "Auto",
-        "desc": ""
+        "name": "Auto"
       }
     ],
     "name": "Judgement",
