@@ -4,11 +4,9 @@
  * author: Runas
  */
 
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
-
 import { CompletionItem, Hover, MarkdownString, Position, TextDocument, workspace } from 'vscode';
-import { OClass, OConstructor, OEnum, OEnumMember, OFunction, OObject, OVariable } from './types';
+import * as payload from './payload';
+import { OClass, OConstructor, OEnum, OObject } from './types';
 
 function isCustomTag() {
   const workspaceFolder = workspace
@@ -92,64 +90,14 @@ export default class Manager {
 
     // Load tags
     ['adofai.gg', 'color', 'hardware', 'judgement', 'other', 'play', 'time']
-      .forEach(tagClass => Manager.load('Tags', tagClass + '.json'));
+      .map(tagClass => payload.load('Tags', tagClass + 'json'))
+      .forEach(tags => Manager.list.push(...tags));
     
-    // Load classes
-    Manager.load('Classes.json');
-
-    // Load Enums
-    Manager.load('Enums.json');
-  }
-
-  static load(...pathInImpl: string[]) {
-    const data = readFileSync(resolve(__dirname, '..', 'Impl', ...pathInImpl), { encoding: 'utf-8' });
-    const payloads: OPayload[] = JSON.parse(data);
-    Manager.list.push(...payloads.map(payload => parsePayload(payload)));
-  }
-}
-
-type OPayload = {
-  name: string;
-  desc?: string;
-  type?: string;
-  value?: number;
-  vars?: OPayload[];
-  args?: OPayload[];
-  retType?: string;
-  member?: OPayload[];
-};
-
-function parsePayload(payload: OPayload, parent?: OPayload): OObject {
-  if (payload.type !== undefined) {
-    return new OVariable(payload.name, payload.type, payload.desc);
-  } else if (payload.value !== undefined) {
-    return new OEnumMember(payload.name, payload.value);
-  } else if (payload.vars !== undefined) {
-    return new OEnum(
-      payload.name,
-      payload.vars
-        .map(vari =>parsePayload(vari, payload))
-        .filter((payload: OPayload): payload is OEnumMember => payload.value !== undefined),
-      payload.desc);
-  } else if (payload.args !== undefined && payload.retType !== undefined) {
-    const args = payload.args
-      .map(arg => parsePayload(arg, payload))
-      .filter((payload: OPayload): payload is OVariable => payload.type !== undefined);
-
-    if (parent?.name === payload.name) { // constructor
-      return new OConstructor(payload.name, args, payload.desc);
-    }
-    else { // general function
-      return new OFunction(payload.name, args, payload.retType, payload.desc);
-    }
-  } else if (payload.member !== undefined) {
-    return new OClass(
-      payload.name,
-      payload.member
-        .map(mem => parsePayload(mem, payload)),
-      payload.desc);
-  } else {
-    throw new Error(`What the hell is this payload?!\npayload = ${payload}`);
+    // Load classes and enums
+    Manager.list.push(
+      ...payload.load('Classes.json'),
+      ...payload.load('Enums.json'),
+    );
   }
 }
 
