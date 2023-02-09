@@ -43,10 +43,10 @@ export class OVariable extends OObject {
     };
   }
 
-  toHoverDesc({ isParam, parent }: { isParam?: boolean, parent?: OClass }): string {
-    const tag = parent
+  toHoverDesc({ parent }: { parent?: OClass | OFunction }): string {
+    const tag = parent instanceof OClass
       ? `(property) ${parent.name}.`
-      : isParam === true
+      : parent instanceof OFunction
         ? ''
         : 'var ';
     return tag + this.name + ': ' + this.type;
@@ -127,7 +127,7 @@ export class OFunction extends OObject {
   }
 
   toHoverDesc({ parent }: { parent?: OClass }): string {
-    const args = this.args.map(arg => arg.toHoverDesc({ isParam: true })).join(', ');
+    const args = this.args.map(arg => arg.toHoverDesc({ parent: this })).join(', ');
     const tag = parent ? `(method) ${parent.name}.` : '(function) ';
 
     return tag + this.name + '(' + args + '): ' + this.retType;
