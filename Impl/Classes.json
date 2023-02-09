@@ -1,0 +1,893 @@
+[
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "any",
+            "name": "key",
+            "desc": "Key"
+          }
+        ],
+        "retType": "any",
+        "name": "get",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "any",
+            "name": "key",
+            "desc": "Key"
+          },
+          {
+            "type": "any",
+            "name": "value",
+            "desc": "Value"
+          }
+        ],
+        "retType": "any",
+        "name": "set",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "any",
+        "name": "clear",
+        "desc": ""
+      },
+      {
+        "type": "number",
+        "name": "count",
+        "desc": "Element Count"
+      }
+    ],
+    "name": "Dictionary",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "index",
+            "desc": "Index"
+          }
+        ],
+        "retType": "any",
+        "name": "get",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "any",
+            "name": "index",
+            "desc": "Index"
+          },
+          {
+            "type": "any",
+            "name": "value",
+            "desc": "Value"
+          }
+        ],
+        "retType": "any",
+        "name": "set",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "any",
+        "name": "clear",
+        "desc": ""
+      },
+      {
+        "type": "number",
+        "name": "count",
+        "desc": "Element Count"
+      }
+    ],
+    "name": "List",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "x",
+            "desc": ""
+          },
+          {
+            "type": "number",
+            "name": "y",
+            "desc": ""
+          }
+        ],
+        "retType": "Vector2",
+        "name": "Vector2",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "any",
+        "name": "normalize",
+        "desc": "Normalize This Vector"
+      }
+    ],
+    "name": "Vector2",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "x",
+            "desc": ""
+          },
+          {
+            "type": "number",
+            "name": "y",
+            "desc": ""
+          }
+        ],
+        "retType": "Vector3",
+        "name": "Vector3",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "any",
+        "name": "normalize",
+        "desc": "Normalize This Vector"
+      }
+    ],
+    "name": "Vector3",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "r",
+            "desc": "Red"
+          },
+          {
+            "type": "number",
+            "name": "g",
+            "desc": "Green"
+          },
+          {
+            "type": "number",
+            "name": "b",
+            "desc": "Blue"
+          },
+          {
+            "type": "number",
+            "name": "a",
+            "desc": "Alpha"
+          }
+        ],
+        "retType": "Color",
+        "name": "Color",
+        "desc": ""
+      }
+    ],
+    "name": "Color",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "h",
+            "desc": "Hue"
+          },
+          {
+            "type": "number",
+            "name": "s",
+            "desc": "Saturation"
+          },
+          {
+            "type": "number",
+            "name": "v",
+            "desc": "Value"
+          }
+        ],
+        "retType": "HSV",
+        "name": "HSV",
+        "desc": ""
+      }
+    ],
+    "name": "HSV",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "key",
+            "desc": "KeyCode"
+          }
+        ],
+        "retType": "number",
+        "name": "getKeyDown",
+        "desc": "Is key down"
+      },
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "key",
+            "desc": "KeyCode"
+          }
+        ],
+        "retType": "number",
+        "name": "getKeyUp",
+        "desc": "Is key up"
+      },
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "key",
+            "desc": "KeyCode"
+          }
+        ],
+        "retType": "number",
+        "name": "getKey",
+        "desc": "Is key up or down"
+      }
+    ],
+    "name": "Input",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "Component",
+            "name": "comp",
+            "desc": "Component"
+          },
+          {
+            "type": "Type",
+            "name": "compType",
+            "desc": "Component Type"
+          }
+        ],
+        "retType": "Component",
+        "name": "getComponent",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Component",
+            "name": "comp",
+            "desc": "Component"
+          },
+          {
+            "type": "Type",
+            "name": "compType",
+            "desc": "Component Type"
+          }
+        ],
+        "retType": "Component",
+        "name": "getComponentInChildren",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Component",
+            "name": "comp",
+            "desc": "Component"
+          },
+          {
+            "type": "Type",
+            "name": "compType",
+            "desc": "Component Type"
+          }
+        ],
+        "retType": "Component",
+        "name": "addComponent",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "clrType",
+            "desc": "CLR Type FullName"
+          }
+        ],
+        "retType": "any",
+        "name": "type",
+        "desc": ""
+      }
+    ],
+    "name": "UnityHelper",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "path",
+            "desc": "Image Path"
+          }
+        ],
+        "retType": "Sprite",
+        "name": "load",
+        "desc": ""
+      }
+    ],
+    "name": "Sprite",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "Sprite",
+            "name": "spr",
+            "desc": ""
+          }
+        ],
+        "retType": "GameObject",
+        "name": "GameObject",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Vector2",
+        "name": "getPosition",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Vector2",
+            "name": "vec2",
+            "desc": ""
+          }
+        ],
+        "retType": "any",
+        "name": "setPosition",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Color",
+        "name": "getColor",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Color",
+            "name": "col",
+            "desc": ""
+          }
+        ],
+        "retType": "any",
+        "name": "setColor",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Vector2",
+        "name": "getSize",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Vector2",
+            "name": "vec2",
+            "desc": ""
+          }
+        ],
+        "retType": "any",
+        "name": "setSize",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Sprite",
+        "name": "getSprite",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Sprite",
+            "name": "spr",
+            "desc": ""
+          }
+        ],
+        "retType": "any",
+        "name": "setSprite",
+        "desc": ""
+      }
+    ],
+    "name": "GameObject",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getDeltaTime",
+        "desc": "UnityEngine.Time.deltaTime"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getFixedTime",
+        "desc": "UnityEngine.Time.fixedTime"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getFixedUnscaledDeltaTime",
+        "desc": "UnityEngine.Time.fixedUnscaledDeltaTime"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getFixedUnscaledTime",
+        "desc": "UnityEngine.Time.fixedUnscaledTime"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getFrameCount",
+        "desc": "UnityEngine.Time.frameCount"
+      }
+    ],
+    "name": "Time",
+    "desc": ""
+  },
+  {
+    "type": "Tiles",
+    "name": "tiles",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "index",
+            "desc": "Index"
+          }
+        ],
+        "retType": "Tile",
+        "name": "get",
+        "desc": ""
+      },
+      {
+        "type": "number",
+        "name": "count",
+        "desc": ""
+      }
+    ],
+    "name": "Tiles",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "timing",
+            "desc": "Hit Timing"
+          },
+          {
+            "type": "number",
+            "name": "xAccuracy",
+            "desc": "XAccuracy"
+          },
+          {
+            "type": "number",
+            "name": "accuracy",
+            "desc": "Accuracy"
+          },
+          {
+            "type": "number",
+            "name": "judgement",
+            "desc": "Hit Judgement"
+          }
+        ],
+        "retType": "Tile",
+        "name": "Tile",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getSeqID",
+        "desc": "Times Sequence ID"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getTiming",
+        "desc": "Hit Timing"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getXAccuracy",
+        "desc": "XAccuracy"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getAccuracy",
+        "desc": "Accuracy"
+      },
+      {
+        "args": [],
+        "retType": "number",
+        "name": "getJudgement",
+        "desc": "Hit Judgement"
+      }
+    ],
+    "name": "Tile",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "planetType",
+            "desc": "PlanetType"
+          }
+        ],
+        "retType": "Planet",
+        "name": "Planet",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Color",
+        "name": "getColor",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Color",
+            "name": "col",
+            "desc": ""
+          }
+        ],
+        "retType": "any",
+        "name": "setColor",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Sprite",
+        "name": "getSprite",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Sprite",
+            "name": "spr",
+            "desc": ""
+          }
+        ],
+        "retType": "any",
+        "name": "setSprite",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Color",
+        "name": "getSpriteSize",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Vector2",
+            "name": "vec2",
+            "desc": ""
+          }
+        ],
+        "retType": "any",
+        "name": "setSpriteSize",
+        "desc": ""
+      }
+    ],
+    "name": "Planet",
+    "desc": ""
+  },
+  {
+    "member": [
+      {
+        "args": [],
+        "retType": "string",
+        "name": "getCurDir",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "string",
+        "name": "getModDir",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "any",
+            "name": "obj",
+            "desc": "Anything"
+          }
+        ],
+        "retType": "number",
+        "name": "log",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "number",
+        "name": "hit",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "number",
+        "name": "init",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "number",
+        "name": "openLevel",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "number",
+        "name": "sceneLoad",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "number",
+        "name": "update",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "target",
+            "desc": "target; scrController:Awake"
+          },
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "boolean",
+        "name": "prefix",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "target",
+            "desc": "target; scrController:Awake"
+          },
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          }
+        ],
+        "retType": "boolean",
+        "name": "postfix",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "difficulty",
+            "desc": "Difficulty"
+          },
+          {
+            "type": "number",
+            "name": "pitch",
+            "desc": "Pitch"
+          },
+          {
+            "type": "number",
+            "name": "accuracy",
+            "desc": "Accuracy"
+          },
+          {
+            "type": "number",
+            "name": "totalTiles",
+            "desc": "Total Tiles"
+          }
+        ],
+        "retType": "number",
+        "name": "calculatePP",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "name",
+            "desc": "Variable name"
+          }
+        ],
+        "retType": "any",
+        "name": "getGlobalVariable",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "name",
+            "desc": "Variable name"
+          },
+          {
+            "type": "any",
+            "name": "obj",
+            "desc": "New value"
+          }
+        ],
+        "retType": "any",
+        "name": "setGlobalVariable",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "HSV",
+        "name": "RGBToHSV",
+        "desc": ""
+      },
+      {
+        "args": [],
+        "retType": "Color",
+        "name": "HSVToRGB",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "number",
+            "name": "planetType",
+            "desc": "Planet Type"
+          }
+        ],
+        "retType": "Planet",
+        "name": "getPlanet",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "clrType",
+            "desc": "Full CLR Type name"
+          }
+        ],
+        "retType": "any",
+        "name": "resolve",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "clrType",
+            "desc": "Full CLR Type name"
+          }
+        ],
+        "retType": "any",
+        "name": "generateProxy",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "name",
+            "desc": "Tag name"
+          },
+          {
+            "type": "Function",
+            "name": "func",
+            "desc": "Function"
+          },
+          {
+            "type": "boolean",
+            "name": "notplaying",
+            "desc": "Allow For Not Playing"
+          }
+        ],
+        "retType": "any",
+        "name": "registerTag",
+        "desc": ""
+      },
+      {
+        "args": [
+          {
+            "type": "string",
+            "name": "name",
+            "desc": "Tag name"
+          }
+        ],
+        "retType": "any",
+        "name": "unregisterTag",
+        "desc": ""
+      }
+    ],
+    "name": "Overlayer",
+    "desc": ""
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Year",
+    "desc": "현재 연도"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Month",
+    "desc": "현재 월"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Day",
+    "desc": "현재 일"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Hour",
+    "desc": "현재 시간"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Minute",
+    "desc": "현재 분"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Second",
+    "desc": "현재 초"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "MilliSecond",
+    "desc": "현재 밀리초"
+  }
+]

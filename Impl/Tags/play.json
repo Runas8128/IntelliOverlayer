@@ -1,0 +1,254 @@
+[
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "Accuracy",
+    "desc": "정확도"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "XAccuracy",
+    "desc": "절대정확도"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "Progress",
+    "desc": "진행도"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "BestProgress",
+    "desc": "최대 진행도"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "StartProgress",
+    "desc": "시작 진행도"
+  },
+  {
+    "args": [
+      {
+        "type": "string",
+        "name": "opt",
+        "desc": "진행도의 범위. `[시작 진행도]~[끝 진행도]` 형식"
+      }
+    ],
+    "retType": "number",
+    "name": "ProgressDeath",
+    "desc": "지정 범위에서 죽은 횟수"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "CurBpm",
+    "desc": "체감 BPM"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "TileBpm",
+    "desc": "타일 BPM"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "RecKps",
+    "desc": "체감 KPS"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "StartTile",
+    "desc": "시작 타일의 인덱스"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurTile",
+    "desc": "현재 타일의 인덱스"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "LeftTile",
+    "desc": "남은 타일 개수"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "TotalTile",
+    "desc": "전체 타일 개수"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurMinute",
+    "desc": "현재 재생되고 있는 곡의 분"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurSecond",
+    "desc": "현재 재생되고 있는 곡의 초"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurMilliSecond",
+    "desc": "현재 재생되고 있는 곡의 밀리초"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "TotalMinute",
+    "desc": "현재 재생되고 있는 곡의 전체 분"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "TotalSecond",
+    "desc": "현재 재생되고 있는 곡의 전체 초"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "TotalMilliSecond",
+    "desc": "현재 재생되고 있는 곡의 전체 밀리초"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CurCheckPoint",
+    "desc": "현재 체크포인트의 순서"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "TotalCheckPoint",
+    "desc": "전체 체크포인트의 개수"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "LeastCheckPoint",
+    "desc": "체크포인트 최소 사용 횟수"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "CheckPoint",
+    "desc": "현재 체크포인트 사용 횟수"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Attempts",
+    "desc": "맵 시도 횟수"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Combo",
+    "desc": "콤보 수"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "Score",
+    "desc": "현재 난이도의 점수"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "LScore",
+    "desc": "느슨 난이도의 점수"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "NScore",
+    "desc": "보통 난이도의 점수"
+  },
+  {
+    "args": [],
+    "retType": "number",
+    "name": "SScore",
+    "desc": "엄격 난이도의 점수"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "Timing",
+    "desc": "키보드를 친 타이밍 (오차)"
+  },
+  {
+    "args": [
+      {
+        "type": "number",
+        "name": "opt",
+        "desc": ""
+      }
+    ],
+    "retType": "number",
+    "name": "TimingAvg",
+    "desc": "Timing값의 평균"
+  }
+]
