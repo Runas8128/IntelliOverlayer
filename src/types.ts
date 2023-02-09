@@ -1,5 +1,5 @@
 /**
- * Overlayer IntelliCode Extension
+ * Base types to indicate Objects in `Impl.js`
  * 
  * author: Runas
  */

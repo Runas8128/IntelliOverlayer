@@ -1,3 +1,9 @@
+/**
+ * Simple provider for word selected in vscode
+ * 
+ * author: Runas
+ */
+
 import { Position, TextDocument } from 'vscode';
 
 export class WordProvider {

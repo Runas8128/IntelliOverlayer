@@ -1,5 +1,5 @@
 /**
- * Overlayer IntelliCode Extension
+ * Object Manager that provides Suggestion and Hover documentation
  * 
  * author: Runas
  */

@@ -1,5 +1,5 @@
 /**
- * Overlayer IntelliCode Extension
+ * IntelliOverlayer: Extension for Overlayer IntelliCode
  * 
  * author: Runas
  */
