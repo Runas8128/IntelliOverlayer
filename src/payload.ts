@@ -17,16 +17,19 @@ type OPayload = {
 function parsePayload(payload: OPayload, parent?: OPayload): OObject {
   if (payload.type !== undefined) {
     return new OVariable(payload.name, payload.type, payload.desc);
-  } else if (payload.value !== undefined) {
+  }
+  else if (payload.value !== undefined) {
     return new OEnumMember(payload.name, payload.value);
-  } else if (payload.vars !== undefined) {
+  }
+  else if (payload.vars !== undefined) {
     return new OEnum(
       payload.name,
       payload.vars
         .map(vari => parsePayload(vari, payload))
         .filter((payload: OPayload): payload is OEnumMember => payload.value !== undefined),
       payload.desc);
-  } else if (payload.args !== undefined && payload.retType !== undefined) {
+  }
+  else if (payload.args !== undefined && payload.retType !== undefined) {
     const args = payload.args
       .map(arg => parsePayload(arg, payload))
       .filter((payload: OPayload): payload is OVariable => payload.type !== undefined);
@@ -37,13 +40,15 @@ function parsePayload(payload: OPayload, parent?: OPayload): OObject {
     else { // general function
       return new OFunction(payload.name, args, payload.retType, payload.desc);
     }
-  } else if (payload.member !== undefined) {
+  }
+  else if (payload.member !== undefined) {
     return new OClass(
       payload.name,
       payload.member
         .map(mem => parsePayload(mem, payload)),
       payload.desc);
-  } else {
+  }
+  else {
     throw new Error(`What the hell is this payload?!\npayload = ${payload}`);
   }
 }
