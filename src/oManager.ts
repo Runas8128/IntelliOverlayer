@@ -82,9 +82,23 @@ export default class Manager {
   static find = (name?: string) => Manager.list.find(obj => obj.name === name);
 
   static init() {
-    const data = readFileSync(resolve(__dirname, '..', 'tags.json'), { encoding: 'utf-8' });
-    const payloads = JSON.parse(data);
-    Manager.list = payloads.map((payload: OPayload) => parsePayload(payload));
+    Manager.list = [];
+
+    // Load tags
+    ['adofai.gg', 'color', 'hardware', 'judgement', 'other', 'play', 'time']
+      .forEach(tagClass => Manager.load('Tags', tagClass + '.json'));
+    
+    // Load classes
+    Manager.load('Classes.json');
+
+    // Load Enums
+    Manager.load('Enums.json');
+  }
+
+  static load(...pathInImpl: string[]) {
+    const data = readFileSync(resolve(__dirname, '..', 'Impl', ...pathInImpl), { encoding: 'utf-8' });
+    const payloads: OPayload[] = JSON.parse(data);
+    Manager.list.push(...payloads.map(payload => parsePayload(payload)));
   }
 }
 
