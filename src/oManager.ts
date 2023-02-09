@@ -91,7 +91,7 @@ export default class Manager {
 
     // Load tags
     ['adofai.gg', 'color', 'hardware', 'judgement', 'other', 'play', 'time']
-      .map(tagClass => payload.load('Tags', tagClass + 'json'))
+      .map(tagClass => payload.load('Tags', tagClass + '.json'))
       .forEach(tags => Manager.list.push(...tags));
     
     // Load classes and enums
