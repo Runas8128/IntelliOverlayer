@@ -23,7 +23,7 @@ function parsePayload(payload: OPayload, parent?: OPayload): OObject {
     return new OEnum(
       payload.name,
       payload.vars
-        .map(vari =>parsePayload(vari, payload))
+        .map(vari => parsePayload(vari, payload))
         .filter((payload: OPayload): payload is OEnumMember => payload.value !== undefined),
       payload.desc);
   } else if (payload.args !== undefined && payload.retType !== undefined) {
