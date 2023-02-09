@@ -1,3 +1,9 @@
+/**
+ * Overlayer IntelliCode Extension
+ * 
+ * author: Runas
+ */
+
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 
