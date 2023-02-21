@@ -36,9 +36,11 @@ ___
 
 * 태그의 설명을 [오버레이어 위키](http://overlayer.info/)의 설명으로 교체했습니다. ||| Replaced tag's descriptions to [Overlayer Wiki](http://overlayer.info/)'s descriptions
     * 영문 번역은 추후 추가할 예정입니다. ||| English translation will be available soon
-* Tags.json 파일을 위키의 분류에 따라 7+2(`Enum`, `Class`)개의 파일로 분할했습니다.
-Added extension icon (temporary)
-    - 임시 아이콘이기 때문에 언제든지 바뀔 수 있습니다. ||| It can be changed at anytime since this is temporary icon
+* `Tags.json` 파일을 위키의 분류에 따라 7+2(`Enum`, `Class`)개의 파일로 분할했습니다. ||| Separated `Tags.json` file to 7+2(`Enum`, `Class`) files according to the classification of wiki
+
+### 0.1.1
+* Added extension icon (temporary)
+    * 임시 아이콘이기 때문에 언제든지 바뀔 수 있습니다. ||| It can be changed at anytime since this is temporary icon
 
 ### 0.1.0
 
