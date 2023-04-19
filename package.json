@@ -37,8 +37,7 @@
           "type": "array",
           "default": [
             "Overlayer",
-            "CustomTags",
-            "Inits"
+            "Scripts"
           ],
           "description": "오버레이어 커스텀 태그를 위한 워크스페이스로 인식할 폴더명입니다."
         }
