@@ -1,0 +1,22 @@
+{{
+  function build(o) {
+    return o.join('');
+  }
+}}
+
+start = _ Objs:(PYFunction)+ _ { return Objs; }
+
+PYFunction = 'def ' _ name:specifier _ '(' args:Args? '):' _ string _
+{ return { 'type': 'function', 'name': name, 'args': args }; }
+
+Args = args:LeadingArgs* larg:Arg { args.push(larg); return args; }
+
+LeadingArgs = arg:Arg _ ',' _ { return arg; }
+
+Arg = name:specifier _ ':' _ type:specifier { return { 'name': name, 'type': type }; }
+
+string = content:[A-Za-z0-9 \*(),.]+ { return build(content).trim(); }
+
+specifier = name:[A-Za-z0-9]+ { return build(name); }
+
+_ = [ \t\r\n]*

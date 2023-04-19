@@ -1,0 +1,30 @@
+{{
+  function build(o) {
+    return o.join('');
+  }
+}}
+
+start = _ Objs:(JSFunction)+ _ { return Objs; }
+
+JSFunction = docs:JSDOC? _ 'function ' _ name:specifier _ '(' _ args:Args? _ ');' _
+{
+  return { 'type': 'function', 'name': name, 'args': docs.filter(doc => args?.includes(doc.name)) };
+}
+
+Args = args:LeadingArgs* larg:specifier { args.push(larg); return args; }
+
+LeadingArgs = arg:specifier _ ',' _ { return arg; }
+
+JSDOC = '/*' ('*' _)? _ content:(dParam/dReturn)+ _ '*/' { return content; }
+
+dParam = _ '*'? _ '@param {' type:specifier '}' _ name:specifier
+{ return { 'name': name, 'type': type }; }
+
+dReturn = _ '*'? _ '@return' 's'? ' {' type:specifier '}' _
+{ return { 'name': 'return', 'type': type }; }
+
+string = content:[A-Za-z0-9 \*]+ { return build(content).trim(); }
+
+specifier = name:[A-Za-z0-9]+ { return build(name); }
+
+_ = [ \t\r\n]*
