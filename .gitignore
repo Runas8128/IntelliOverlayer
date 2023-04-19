@@ -5,3 +5,4 @@ node_modules
 build
 
 modifyTags.js
+/package-lock.json
