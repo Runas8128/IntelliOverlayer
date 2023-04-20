@@ -41,6 +41,11 @@
             "Scripts"
           ],
           "description": "오버레이어 커스텀 태그를 위한 워크스페이스로 인식할 폴더명입니다."
+        },
+        "intellioverlayer.modsFolder": {
+          "type": "string",
+          "default": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\A Dance of Fire and Ice\\Mods",
+          "description": "얼불춤 모드가 설치되어있는 폴더입니다."
         }
       }
     }
