@@ -64,7 +64,8 @@ export class Intelligence {
 
   static suggestObject(partialName: string, lang: 'js' | 'py') {
     LOGGER.appendLine("Suggesting object which name has " + partialName + " in " + lang);
-    const result = Intelligence._pObj[lang].filter(func => func.name.includes(partialName));
+    const result = Intelligence._pObj[lang]
+      .filter(func => func.name.toLowerCase().includes(partialName.toLowerCase()));
     LOGGER.appendLine("Found " + result.length + " object starting with" + result[0]?.name);
     return result;
   }
