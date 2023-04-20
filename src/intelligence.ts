@@ -1,7 +1,9 @@
 import { readFileSync, readdirSync } from 'fs';
 import { resolve } from 'path';
 import * as peggy from 'peggy';
-import { CompletionItem, CompletionItemKind, Hover, MarkdownString, SnippetString, workspace } from "vscode";
+import { CompletionItem, CompletionItemKind, Hover, MarkdownString, SnippetString, window, workspace } from "vscode";
+
+export const LOGGER = window.createOutputChannel("IntelliOverlayer");
 
 const modsFolder = workspace
   .getConfiguration('intellioverlayer')
@@ -56,10 +58,12 @@ export class Intelligence {
   }
 
   static getObject(name: string, lang: 'js' | 'py') {
+    LOGGER.appendLine("Getting object named " + name + " in " + lang);
     return Intelligence._pObj[lang].find(func => func.name === name);
   }
 
   static suggestObject(partialName: string, lang: 'js' | 'py') {
+    LOGGER.appendLine("Suggesting object which name has " + partialName + " in " + lang);
     return Intelligence._pObj[lang].filter(func => func.name.includes(partialName));
   }
 }
