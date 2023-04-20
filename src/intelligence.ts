@@ -50,10 +50,10 @@ export class Intelligence {
         success++;
       }
       catch (e) {
-        LOGGER.appendLine("Loading " + file + " failed: " + e);
+        LOGGER.appendLine("Loading " + file + " failed. ");
       }
     }
-    LOGGER.appendLine(success + " / " + total + " js files are loaded.");
+    LOGGER.appendLine(success + " / " + total + " python files are loaded.");
     LOGGER.appendLine("Total loaded functions: " + Intelligence._pObj.py.length);
   }
 
