@@ -64,7 +64,9 @@ export class Intelligence {
 
   static suggestObject(partialName: string, lang: 'js' | 'py') {
     LOGGER.appendLine("Suggesting object which name has " + partialName + " in " + lang);
-    return Intelligence._pObj[lang].filter(func => func.name.includes(partialName));
+    const result = Intelligence._pObj[lang].filter(func => func.name.includes(partialName));
+    LOGGER.appendLine("Found " + result.length + " object starting with" + result[0]?.name);
+    return result;
   }
 }
 
@@ -78,7 +80,7 @@ const obj2comp: { [key: string]: (_: any) => CompletionItem } = {
           .join(', ')
         + ')$0'
     ),
-    sortText: '!' + name,
+    sortText: name,
     kind: CompletionItemKind.Function,
   }),
 };
