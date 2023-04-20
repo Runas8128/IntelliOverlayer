@@ -19,7 +19,8 @@
     "Snippets"
   ],
   "activationEvents": [
-    "onLanguage:javascript"
+    "onLanguage:javascript",
+    "onLanguage:python"
   ],
   "capabilities": {
     "untrustedWorkspaces": {
