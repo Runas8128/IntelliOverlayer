@@ -6,8 +6,15 @@
 
 start = _ Objs:(PYFunction)+ _ { return Objs; }
 
-PYFunction = 'def ' _ name:specifier _ '(' args:Args? '):' _ string _
-{ return { 'type': 'function', 'name': name, 'args': args }; }
+PYFunction = 'def ' _ name:specifier _ '(' args:Args? ')' _ '->' _ returns: specifier _ ':' _ string _
+{
+  return {
+    'type': 'function',
+    'name': name,
+    'args': args,
+    'returns': returns
+  };
+}
 
 Args = args:LeadingArgs* larg:Arg { args.push(larg); return args; }
 

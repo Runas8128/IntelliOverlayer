@@ -8,7 +8,12 @@ start = _ Objs:(JSFunction)+ _ { return Objs; }
 
 JSFunction = docs:JSDOC? _ 'function ' _ name:specifier _ '(' _ args:Args? _ ');' _
 {
-  return { 'type': 'function', 'name': name, 'args': docs.filter(doc => args?.includes(doc.name)) };
+  return {
+    'type': 'function',
+    'name': name,
+    'args': docs.filter(doc => args?.includes(doc.name)),
+    'returns': docs.find(doc => doc.name === 'return').type,
+  };
 }
 
 Args = args:LeadingArgs* larg:specifier { args.push(larg); return args; }
