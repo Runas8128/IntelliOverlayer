@@ -1,5 +1,5 @@
 /**
- * Simple utils including Code Suggester / Hover docs generator wrappers
+ * Utils for IntelliOverlayer logics
  *
  * author: Runas
  */

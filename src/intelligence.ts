@@ -1,3 +1,9 @@
+/**
+ * Simple Code Suggester / Hover docs generator
+ * 
+ * Author: Runas
+ */
+
 import { readdirSync } from 'fs';
 import { generate } from 'peggy';
 import { Hover, MarkdownString } from "vscode";
