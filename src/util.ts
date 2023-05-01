@@ -6,13 +6,27 @@
 
 import {
   SnippetString, CompletionItem, CompletionItemKind,
-  Hover, MarkdownString,
-  Position, TextDocument, workspace
+  Position, TextDocument, workspace, window
 } from 'vscode';
 
-import { Function, Intelligence } from './intelligence';
+import { Function } from './types';
+import { readFileSync } from 'fs';
+import { resolve } from 'path';
 
-const obj2comp: { [key: string]: (_: any) => CompletionItem } = {
+export const LOGGER = window.createOutputChannel("IntelliOverlayer");
+
+const modsFolder = workspace
+  .getConfiguration('intellioverlayer')
+  .get<string>('modsFolder') ??
+'C:\\Program Files (x86)\\Steam\\steamapps\\common\\A Dance of Fire and Ice\\Mods';
+
+export const scriptsFolder = resolve(modsFolder, 'Overlayer', 'Scripts');
+
+const load = (...path: string[]) => readFileSync(resolve(...path), { encoding: 'utf-8' });
+export const loadLocal = (...path: string[]) => load(__dirname, '..', ...path);
+export const loadImpl = (...path: string[]) => load(scriptsFolder, ...path);
+
+export const obj2comp: { [key: string]: (_: any) => CompletionItem } = {
   'function': ({ name, args }: Function) => ({
     label: name,
     insertText: new SnippetString(
@@ -27,7 +41,7 @@ const obj2comp: { [key: string]: (_: any) => CompletionItem } = {
   }),
 };
 
-const obj2hoverStr: { [key: string]: (_0: any, _1: 'js' | 'py') => string } = {
+export const obj2hoverStr: { [key: string]: (_0: any, _1: 'js' | 'py') => string } = {
   'function': ({ name, args, returns }: Function, lang: 'js' | 'py') =>
     (lang === 'js' ? '(function) ' : 'def ')
       + name + '('
@@ -36,26 +50,6 @@ const obj2hoverStr: { [key: string]: (_0: any, _1: 'js' | 'py') => string } = {
       + (lang === 'js' ? ': ' : ' -> ')
       + returns,
 };
-
-export const getSuggest = (lang: 'js' | 'py') =>
-  async (name: string) : Promise<CompletionItem[]> =>
-    Intelligence
-      .suggestObject(name, lang)
-      .map(obj => obj2comp[obj.type](obj));
-
-export const getHover = (lang: 'js' | 'py') =>
-  async (name: string) : Promise<Hover | undefined> => {
-    const obj = Intelligence.getObject(name, lang);
-    if (!obj) { return; }
-
-    const mdStr = new MarkdownString();
-    mdStr.supportHtml = true;
-    mdStr.appendCodeblock(
-      obj2hoverStr[obj.type](obj, lang),
-      lang === 'js' ? 'typescript' : 'python'
-    );
-    return new Hover(mdStr);
-  };
 
 const isCustomTag = () =>
   workspace

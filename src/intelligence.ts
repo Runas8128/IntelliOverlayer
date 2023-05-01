@@ -1,23 +1,9 @@
-import { readFileSync, readdirSync } from 'fs';
-import { resolve } from 'path';
+import { readdirSync } from 'fs';
 import { generate } from 'peggy';
-import { window, workspace } from "vscode";
+import { Hover, MarkdownString } from "vscode";
 
-export const LOGGER = window.createOutputChannel("IntelliOverlayer");
-
-const modsFolder = workspace
-  .getConfiguration('intellioverlayer')
-  .get<string>('modsFolder') ??
-'C:\\Program Files (x86)\\Steam\\steamapps\\common\\A Dance of Fire and Ice\\Mods';
-
-const scriptsFolder = resolve(modsFolder, 'Overlayer', 'Scripts');
-
-const load = (...path: string[]) => readFileSync(resolve(...path), { encoding: 'utf-8' });
-const loadLocal = (...path: string[]) => load(__dirname, '..', ...path);
-const loadImpl = (...path: string[]) => load(scriptsFolder, ...path);
-
-type Arg = { name: string, type: string };
-export type Function = { type: 'function', name: string, args: Arg[], returns: string };
+import { Function } from './types';
+import { LOGGER, loadImpl, loadLocal, obj2comp, obj2hoverStr, scriptsFolder } from './util';
 
 export class Intelligence {
   static _pObj: { js: Function[], py: Function[] } = { js: [], py: [] };
@@ -63,3 +49,23 @@ export class Intelligence {
     return result;
   }
 }
+
+export const getSuggest = (lang: 'js' | 'py') =>
+  async (name: string) =>
+    Intelligence
+      .suggestObject(name, lang)
+      .map(obj => obj2comp[obj.type](obj));
+
+export const getHover = (lang: 'js' | 'py') =>
+  async (name: string) => {
+    const obj = Intelligence.getObject(name, lang);
+    if (!obj) { return; }
+
+    const mdStr = new MarkdownString();
+    mdStr.supportHtml = true;
+    mdStr.appendCodeblock(
+      obj2hoverStr[obj.type](obj, lang),
+      lang === 'js' ? 'typescript' : 'python'
+    );
+    return new Hover(mdStr);
+  };
