@@ -5,7 +5,7 @@
  */
 
 import { languages, ExtensionContext } from 'vscode';
-import { suggest, hover } from './oManager';
+import { consume, getSuggest, getHover } from './util';
 import { Intelligence } from "./intelligence";
 
 // On Activated
@@ -15,19 +15,19 @@ export function activate(context: ExtensionContext) {
   context.subscriptions.push(
     languages.registerCompletionItemProvider(
       { language: 'javascript', scheme: 'file', },
-      { provideCompletionItems: suggest('js') },
+      { provideCompletionItems: consume(getSuggest('js'), []) },
     ),
     languages.registerCompletionItemProvider(
       { language: 'python', scheme: 'file', },
-      { provideCompletionItems: suggest('py') },
+      { provideCompletionItems: consume(getSuggest('py'), []) },
     ),
     languages.registerHoverProvider(
       { language: 'javascript', scheme: 'file', },
-      { provideHover: hover('js') },
+      { provideHover: consume(getHover('js'), undefined) },
     ),
     languages.registerHoverProvider(
       { language: 'python', scheme: 'file', },
-      { provideHover: hover('py') },
+      { provideHover: consume(getHover('py'), undefined) },
     ),
   );
 }

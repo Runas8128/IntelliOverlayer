@@ -1,7 +1,7 @@
 import { readFileSync, readdirSync } from 'fs';
 import { resolve } from 'path';
-import * as peggy from 'peggy';
-import { CompletionItem, CompletionItemKind, Hover, MarkdownString, SnippetString, window, workspace } from "vscode";
+import { generate } from 'peggy';
+import { window, workspace } from "vscode";
 
 export const LOGGER = window.createOutputChannel("IntelliOverlayer");
 
@@ -17,44 +17,37 @@ const loadLocal = (...path: string[]) => load(__dirname, '..', ...path);
 const loadImpl = (...path: string[]) => load(scriptsFolder, ...path);
 
 type Arg = { name: string, type: string };
-type Function = { type: 'function', name: string, args: Arg[], returns: string };
+export type Function = { type: 'function', name: string, args: Arg[], returns: string };
 
 export class Intelligence {
   static _pObj: { js: Function[], py: Function[] } = { js: [], py: [] };
-  static init() {
-    LOGGER.appendLine("Loading js related contents...");
-    const JS_Parser = peggy.generate(loadLocal('peg', 'JS.peg'));
-    let total = 0, success = 0;
-    for (const file of readdirSync(scriptsFolder).filter(fname => fname.endsWith('.js'))) {
-      total++;
-      try {
-        Intelligence._pObj.js.push(...JS_Parser.parse(loadImpl(file)));
-        LOGGER.appendLine("Loading " + file + " successed. ");
-        success++;
-      }
-      catch (e) {
-        LOGGER.appendLine("Loading " + file + " failed. ");
-      }
-    }
-    LOGGER.appendLine(success + " / " + total + " js files are loaded.");
-    LOGGER.appendLine("Total loaded functions: " + Intelligence._pObj.js.length);
 
-    LOGGER.appendLine("Loading python related contents...");
-    const PY_Parser = peggy.generate(loadLocal('peg', 'PY.peg'));
-    total = 0; success = 0;
-    for (const file of readdirSync(scriptsFolder).filter(fname => fname.endsWith('.py'))) {
-      total++;
+  static init() {
+    this._init('js', 'js');
+    this._init('python', 'py');
+  }
+
+  static _init(related: string, extension: 'js' | 'py') {
+    LOGGER.appendLine(`Loading ${related} related contents...`);
+
+    const { parse } = generate(loadLocal('peg', extension.toUpperCase() + '.peg'));
+    let success = 0;
+
+    const files = readdirSync(scriptsFolder).filter(fName => fName.endsWith('.' + extension));
+
+    files.forEach(file => {
       try {
-        Intelligence._pObj.py.push(...PY_Parser.parse(loadImpl(file)));
-        LOGGER.appendLine("Loading " + file + " successed. ");
+        Intelligence._pObj[extension].push(...parse(loadImpl(file)));
+        LOGGER.appendLine("Loading " + file + " successed.");
         success++;
       }
       catch (e) {
-        LOGGER.appendLine("Loading " + file + " failed. ");
+        LOGGER.appendLine("Loading " + file + " failed.");
       }
-    }
-    LOGGER.appendLine(success + " / " + total + " python files are loaded.");
-    LOGGER.appendLine("Total loaded functions: " + Intelligence._pObj.py.length);
+    });
+    
+    LOGGER.appendLine(success + " / " + files.length + ` ${extension} files are loaded.`);
+    LOGGER.appendLine("Total loaded functions: " + Intelligence._pObj[extension].length);
   }
 
   static getObject(name: string, lang: 'js' | 'py') {
@@ -70,44 +63,3 @@ export class Intelligence {
     return result;
   }
 }
-
-const obj2comp: { [key: string]: (_: any) => CompletionItem } = {
-  'function': ({ name, args }: Function) => ({
-    label: name,
-    insertText: new SnippetString(
-      name + `(`
-        + args
-          .map((arg, index) => `$\{${index + 1}:${arg.name}\}`)
-          .join(', ')
-        + ')$0'
-    ),
-    sortText: name,
-    kind: CompletionItemKind.Function,
-  }),
-};
-
-const obj2hoverStr: { [key: string]: (_0: any, _1: 'js' | 'py') => string } = {
-  'function': ({ name, args, returns }: Function, lang: 'js' | 'py') =>
-    (lang === 'js' ? '(function) ' : 'def ')
-      + name + '('
-      + args.map(arg => `${arg.name}: ${arg.type}`).join(', ')
-      + ')'
-      + (lang === 'js' ? ': ' : ' -> ')
-      + returns,
-};
-
-export const getSuggest = async (name: string, lang: 'js' | 'py')
-  : Promise<CompletionItem[]> => Intelligence
-    .suggestObject(name, lang)
-    .map(obj => obj2comp[obj.type](obj));
-
-export const getHover = async (name: string, lang: 'js' | 'py')
-  : Promise<Hover | undefined> => {
-  const obj = Intelligence.getObject(name, lang);
-  if (!obj) { return; }
-
-  const mdStr = new MarkdownString();
-  mdStr.supportHtml = true;
-  mdStr.appendCodeblock(obj2hoverStr[obj.type](obj, lang), lang === 'js' ? 'typescript' : 'python');
-  return new Hover(mdStr);
-};
