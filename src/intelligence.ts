@@ -5,11 +5,18 @@
  */
 
 import { readdirSync } from 'fs';
-import { generate } from 'peggy';
+import { generate, parser } from 'peggy';
 import { Hover, MarkdownString } from "vscode";
 
 import { Function } from './types';
 import { LOGGER, loadImpl, loadLocal, obj2comp, obj2hoverStr, scriptsFolder } from './util';
+
+const isSyntaxError = (e: unknown): e is parser.SyntaxError => (
+  e instanceof Object &&
+  'location' in e &&
+  'expected' in e &&
+  'found' in e
+);
 
 export class Intelligence {
   static _pObj: { js: Function[], py: Function[] } = { js: [], py: [] };
@@ -35,6 +42,13 @@ export class Intelligence {
       }
       catch (e) {
         LOGGER.appendLine("Loading " + file + " failed.");
+        if (isSyntaxError(e)) {
+          LOGGER.appendLine(
+            "Location: [(" + e.location.start.line + ", " + e.location.start.column + ')' + ", " + 
+            '(' + e.location.end.line + ", " + e.location.end.column + ")]"
+          );
+          LOGGER.appendLine("Message: " + e);
+        }
       }
     });
     

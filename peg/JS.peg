@@ -22,11 +22,13 @@ LeadingArgs = arg:specifier _ ',' _ { return arg; }
 
 JSDOC = '/*' ('*' _)? _ content:(dParam/dReturn)+ _ '*/' { return content; }
 
-dParam = _ '*'? _ '@param {' type:specifier '}' _ name:specifier
+dParam = _ '*'? _ '@param {' type:typeSpec '}' _ name:specifier
 { return { 'name': name, 'type': type }; }
 
-dReturn = _ '*'? _ '@return' 's'? ' {' type:specifier '}' _
+dReturn = _ '*'? _ '@return' 's'? ' {' type:typeSpec '}' _
 { return { 'name': 'return', 'type': type }; }
+
+typeSpec = type:specifier '[]' { return type + '[]'; } / specifier
 
 string = content:[A-Za-z0-9 \*]+ { return build(content).trim(); }
 
