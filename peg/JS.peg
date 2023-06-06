@@ -1,10 +1,16 @@
+// string builder
+
 {{
   function build(o) {
     return o.join('');
   }
 }}
 
+// JS file fully explained
+
 start = _ Objs:(JSFunction)+ _ { return Objs; }
+
+// ==================== Function Section ====================
 
 JSFunction = docs:JSDOC? _ 'function ' _ name:specifier _ '(' _ args:Args? _ ');' _
 {
@@ -20,6 +26,8 @@ Args = args:LeadingArgs* larg:specifier { args.push(larg); return args; }
 
 LeadingArgs = arg:specifier _ ',' _ { return arg; }
 
+// ==================== JSDOC Section ====================
+
 JSDOC = '/*' ('*' _)? _ content:(dParam/dReturn)+ _ '*/' { return content; }
 
 dParam = _ '*'? _ '@param {' type:typeSpec '}' _ name:specifier
@@ -29,6 +37,8 @@ dReturn = _ '*'? _ '@return' 's'? ' {' type:typeSpec '}' _
 { return { 'name': 'return', 'type': type }; }
 
 typeSpec = type:specifier '[]' { return type + '[]'; } / specifier
+
+// ==================== Misc Section ====================
 
 string = content:[A-Za-z0-9 \*]+ { return build(content).trim(); }
 

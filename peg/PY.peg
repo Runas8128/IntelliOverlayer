@@ -1,10 +1,16 @@
+// string builder
+
 {{
   function build(o) {
     return o.join('');
   }
 }}
 
+// Python file fully explained
+
 start = _ Objs:(PYFunction)+ _ { return Objs; }
+
+// ==================== Function Section ====================
 
 PYFunction = 'def ' _ name:specifier _ '(' args:Args? ')' _ '->' _ returns: specifier _ ':' _ string _
 {
@@ -21,6 +27,8 @@ Args = args:LeadingArgs* larg:Arg { args.push(larg); return args; }
 LeadingArgs = arg:Arg _ ',' _ { return arg; }
 
 Arg = name:specifier _ ':' _ type:specifier { return { 'name': name, 'type': type }; }
+
+// ==================== Misc Section ====================
 
 string = content:[A-Za-z0-9 \*(),.]+ { return build(content).trim(); }
 
