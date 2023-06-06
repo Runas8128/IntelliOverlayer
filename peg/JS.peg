@@ -19,6 +19,7 @@ JSFunction = docs:JSDOC? _ 'function ' _ name:specifier _ '(' _ args:Args? _ ');
     'name': name,
     'args': docs.filter(doc => args?.includes(doc.name)),
     'returns': docs.find(doc => doc.name === 'return').type,
+    'comment': docs.filter(doc => doc.name === 'comment').map(doc => doc.content).join('\n'),
   };
 }
 
@@ -89,7 +90,8 @@ dReturn = _ '*'? _ '@return' 's'? ' {' type:typeSpec '}' _
 dType = _ '*'? _ '@type {' type:typeSpec '}'
 { return { 'name': 'type', 'type': type }; }
 
-dComment = _ '*'? _ firstChar:[^@\/] content:[^\n]* { return (firstChar + build(content)).trim(); }
+dComment = _ '*'? _ firstChar:[^@\/] content:[^\n]*
+{ return { 'name': 'comment', 'content': (firstChar + build(content)).trim() }; }
 
 typeSpec
  = type:specifier '[]' { return type + '[]'; }
