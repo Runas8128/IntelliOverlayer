@@ -8,7 +8,7 @@
 
 // JS file fully explained
 
-start = _ Objs:(JSFunction)+ _ { return Objs; }
+start = _ Objs:(JSFunction/JSClass)+ _ { return Objs; }
 
 // ==================== Function Section ====================
 
@@ -26,9 +26,59 @@ Args = args:LeadingArgs* larg:specifier { args.push(larg); return args; }
 
 LeadingArgs = arg:specifier _ ',' _ { return arg; }
 
+// ==================== Class Section ====================
+
+JSClass = docs:JSDOC? _ 'class ' _ name:specifier _ '{' members:(cField/cMethod/cCtor)+ _ '}'
+{
+  return {
+    'type': 'class',
+    'name': name,
+    'fields': members.filter(member => member.type !== 'function')
+      .concat(members.find(member => member.name === 'constructor').members),
+    'methods': members.filter(member => member.type === 'function' && member.name !== 'constructor'),
+  };
+}
+
+cField = docs:JSDOC? _ 'static ' _ name:specifier ';'
+{
+  return {
+    'name': name,
+    'type': docs?.find(doc => doc.name === 'type')?.type,
+    'isStatic': true,
+  };
+}
+
+cMethod = docs:JSDOC? _ _static:'static '? _ name:specifier _ '(' _ args:Args? _ ')' _ '{' [A-Za-z0-9 \t\n\r,()]+ '}'
+{
+  return {
+    'type': 'function',
+    'name': name,
+    'args': docs?.filter(doc => args?.includes(doc.name)),
+    'returns': docs?.find(doc => doc.name === 'return').type,
+    'isStatic': _static ? true : false,
+  };
+}
+
+cCtor = docs:JSDOC? _ 'constructor' _ '()' _ '{' members:ctorMember+ '}'
+{
+  return {
+    'type': 'function',
+    'name': 'constructor',
+    'members': members,
+  };
+}
+
+ctorMember = docs:JSDOC? _ "this." name:specifier _ '=' _ specifier _ ';' _ {
+  return {
+    'name': name,
+    'type': docs?.find(doc => doc.name === 'type')?.type,
+    'isStatic': false,
+  };
+}
+
 // ==================== JSDOC Section ====================
 
-JSDOC = '/*' ('*' _)? _ content:(dParam/dReturn)+ _ '*/' { return content; }
+JSDOC = _ '/*' ('*' _)? _ content:(dParam/dReturn/dType/dComment)+ _ '*/' { return content; }	
 
 dParam = _ '*'? _ '@param {' type:typeSpec '}' _ name:specifier
 { return { 'name': name, 'type': type }; }
@@ -36,12 +86,20 @@ dParam = _ '*'? _ '@param {' type:typeSpec '}' _ name:specifier
 dReturn = _ '*'? _ '@return' 's'? ' {' type:typeSpec '}' _
 { return { 'name': 'return', 'type': type }; }
 
-typeSpec = type:specifier '[]' { return type + '[]'; } / specifier
+dType = _ '*'? _ '@type {' type:typeSpec '}'
+{ return { 'name': 'type', 'type': type }; }
+
+dComment = _ '*'? _ firstChar:[^@\/] content:[^\n]* { return (firstChar + build(content)).trim(); }
+
+typeSpec
+ = type:specifier '[]' { return type + '[]'; }
+ / type:specifier '&' { return type + '&'; }
+ / specifier
 
 // ==================== Misc Section ====================
 
 string = content:[A-Za-z0-9 \*]+ { return build(content).trim(); }
 
-specifier = name:[A-Za-z0-9]+ { return build(name); }
+specifier = name:[A-Za-z0-9_]+ { return build(name); }
 
 _ = [ \t\r\n]*

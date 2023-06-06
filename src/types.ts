@@ -4,6 +4,14 @@
  * Author: Runas
  */
 
-export type Function = { type: 'function', name: string, args: Arg[], returns: string };
+type Variable = { name: string, type: string };
+type Member = { isStatic: boolean };
 
-export type Arg = { name: string, type: string };
+export type Function = { type: 'function', name: string, args: Variable[], returns: string };
+
+export type Arg = Variable;
+
+export type Class = { type: 'class', name: string, fields: Field[], methods: Method[] };
+
+export type Field = Variable & Member;
+export type Method = Function & Member;
