@@ -10,8 +10,10 @@ const isSyntaxError = (e: unknown): e is parser.SyntaxError => (
   'found' in e
 );
 
-const rawPEG = readFileSync(join(__dirname, '..', 'peg', 'JS.peg'), { encoding: 'utf-8' });
-const impl = readFileSync(join(__dirname, '..', 'impl', 'CImpl.js'), { encoding: 'utf-8' });
+const rawPEG = readFileSync(join(__dirname, '..', 'peg', 'PY.peg'), { encoding: 'utf-8' });
+const impl = readFileSync(join(__dirname, '..', 'impl', 'Impl.py'), { encoding: 'utf-8' });
+
+console.log(`target path: ${join(__dirname, '..', 'impl', 'Impl.py')}`);
 
 try {
   const rst: (Function|Class)[] = generate(rawPEG).parse(impl);

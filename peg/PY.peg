@@ -8,17 +8,18 @@
 
 // Python file fully explained
 
-start = _ Objs:(PYFunction)+ _ { return Objs; }
+start = _ Objs:(PYFunction/PYClass)+ _ { return Objs; }
 
 // ==================== Function Section ====================
 
-PYFunction = 'def ' _ name:specifier _ '(' args:Args? ')' _ '->' _ returns: specifier _ ':' _ string _
+PYFunction = 'def ' _ name:specifier _ '(' args:Args? ')' _ '->' _ returns: typeSpec _ ':' _ comment:Comment? _ [^\n]+ '\n'
 {
   return {
     'type': 'function',
     'name': name,
     'args': args,
-    'returns': returns
+    'returns': returns,
+    'comment': comment,
   };
 }
 
@@ -26,12 +27,77 @@ Args = args:LeadingArgs* larg:Arg { args.push(larg); return args; }
 
 LeadingArgs = arg:Arg _ ',' _ { return arg; }
 
-Arg = name:specifier _ ':' _ type:specifier { return { 'name': name, 'type': type }; }
+Arg
+ = name:specifier _ ':' _ type:typeSpec { return { 'name': name, 'type': type }; }
+ / 'self'
+
+Comment = '"""' comment:[^(""")]+ '"""'
+{
+  return build(comment);
+}
+
+// ==================== Class Section ====================
+
+PYClass = 'class ' name:specifier '():' [\r\n]+ methods:(cInit/cMethod/cStaticMethod)+
+{
+  return {
+    'type': 'class',
+    'name': name,
+    'fields': methods.find(method => method.name === '__init__').fields,
+    'methods': methods.filter(method => method.name !== '__init__'),
+  };
+}
+
+cInit = '  ' _ 'def __init__(self):' [\r\n]+ fields:(cField/cStaticField/cPass)+
+{
+  return {
+    'type': 'function',
+    'name': '__init__',
+    'fields': fields[0] ? fields : [],
+  };
+}
+
+cField = '    ' _ 'self.' name:specifier _ ':' _ type:typeSpec _ "=" _ [^\n]+ '\n'
+{
+  return {
+    'name': name,
+    'type': type,
+    isStatic: false,
+  };
+}
+
+cStaticField = '    ' _ name:specifier _ ':' _ type:typeSpec _ "=" _ [^\n]+ '\n'
+{
+  return {
+    'name': name,
+    'type': type,
+    isStatic: true,
+  };
+}
+
+cPass = '    ' _ 'pass' [^\n]+ '\n'
+{
+  return;
+}
+
+cMethod = '  ' _ func:PYFunction
+{
+  func.isStatic = false;
+  return func;
+}
+
+cStaticMethod = '  ' _ '@staticmethod' _ func:PYFunction
+{
+  func.isStatic = true;
+  return func;
+}
 
 // ==================== Misc Section ====================
 
-string = content:[A-Za-z0-9 \*(),.]+ { return build(content).trim(); }
+typeSpec
+ = '"' type:specifier '"' { return type; }
+ / specifier
 
-specifier = name:[A-Za-z0-9]+ { return build(name); }
+specifier = name:[A-Za-z0-9_]+ { return build(name); }
 
 _ = [ \t\r\n]*
