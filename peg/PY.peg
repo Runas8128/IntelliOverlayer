@@ -19,7 +19,7 @@ PYFunction = 'def ' _ name:specifier _ '(' args:Args? ')' _ '->' _ returns: type
     'name': name,
     'args': args,
     'returns': returns,
-    'comment': comment,
+    'comment': comment ?? '',
   };
 }
 

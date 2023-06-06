@@ -7,7 +7,7 @@
 type Variable = { name: string, type: string };
 type Member = { isStatic: boolean };
 
-export type Function = { type: 'function', name: string, args: Variable[], returns: string };
+export type Function = { type: 'function', name: string, args: Variable[], returns: string, comment: string };
 
 export type Arg = Variable;
 
