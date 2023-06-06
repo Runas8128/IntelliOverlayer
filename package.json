@@ -59,7 +59,8 @@
     "lint": "eslint src --ext ts",
     "build": "vsce package --out build/",
     "publish": "vsce publish",
-    "modifytag": "node modifyTags.js"
+    "modifytag": "node modifyTags.js",
+    "test": "ts-node src/test.ts"
   },
   "devDependencies": {
     "@types/glob": "^8.0.1",
