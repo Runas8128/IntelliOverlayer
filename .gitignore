@@ -4,5 +4,6 @@ node_modules
 *.vsix
 build
 
+impl
 modifyTags.js
 /package-lock.json
