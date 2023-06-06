@@ -9,7 +9,7 @@ import {
   Position, TextDocument, workspace, window
 } from 'vscode';
 
-import { Function } from './types';
+import { Class, Function } from './types';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 
@@ -36,8 +36,11 @@ export const obj2comp: { [key: string]: (_: any) => CompletionItem } = {
           .join(', ')
         + ')$0'
     ),
-    sortText: name,
     kind: CompletionItemKind.Function,
+  }),
+  'class': ({ name }: Class) => ({
+    label: name,
+    kind: CompletionItemKind.Class,
   }),
 };
 
@@ -49,6 +52,9 @@ export const obj2hoverStr: { [key: string]: (_0: any, _1: 'js' | 'py') => string
       + ')'
       + (lang === 'js' ? ': ' : ' -> ')
       + returns,
+  'class': ({ name }: Class, lang: 'js' | 'py') =>
+    (lang === 'js' ? 'class ' : '(class) ')
+     + name
 };
 
 const isCustomTag = () =>

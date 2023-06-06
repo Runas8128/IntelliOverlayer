@@ -8,7 +8,7 @@ import { readdirSync } from 'fs';
 import { generate, parser } from 'peggy';
 import { Hover, MarkdownString } from "vscode";
 
-import { Function } from './types';
+import { IObject } from './types';
 import { LOGGER, loadImpl, loadLocal, obj2comp, obj2hoverStr, scriptsFolder } from './util';
 
 const isSyntaxError = (e: unknown): e is parser.SyntaxError => (
@@ -19,7 +19,7 @@ const isSyntaxError = (e: unknown): e is parser.SyntaxError => (
 );
 
 export class Intelligence {
-  static _pObj: { js: Function[], py: Function[] } = { js: [], py: [] };
+  static _pObj: { js: IObject[], py: IObject[] } = { js: [], py: [] };
 
   static init() {
     this._init('js', 'js');
@@ -63,6 +63,7 @@ export class Intelligence {
 
   static suggestObject(partialName: string, lang: 'js' | 'py') {
     LOGGER.appendLine("Suggesting object which name has " + partialName + " in " + lang);
+    
     const result = Intelligence._pObj[lang]
       .filter(func => func.name.toLowerCase().includes(partialName.toLowerCase()));
     LOGGER.appendLine("Found " + result.length + " object starting with" + result[0]?.name);

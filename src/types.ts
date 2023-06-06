@@ -15,3 +15,5 @@ export type Class = { type: 'class', name: string, fields: Field[], methods: Met
 
 export type Field = Variable & Member;
 export type Method = Function & Member;
+
+export type IObject = Class | Variable | Field | Function | Method;
