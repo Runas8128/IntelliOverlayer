@@ -18,6 +18,8 @@ const isSyntaxError = (e: unknown): e is parser.SyntaxError => (
   'found' in e
 );
 
+type Lang = 'js' | 'py';
+
 export class Intelligence {
   static _pObj: { js: IObject[], py: IObject[] } = { js: [], py: [] };
 
@@ -26,7 +28,7 @@ export class Intelligence {
     this._init('python', 'py');
   }
 
-  static _init(related: string, extension: 'js' | 'py') {
+  static _init(related: string, extension: Lang) {
     LOGGER.appendLine(`Loading ${related} related contents...`);
 
     const { parse } = generate(loadLocal('peg', extension.toUpperCase() + '.peg'));
@@ -56,12 +58,12 @@ export class Intelligence {
     LOGGER.appendLine("Total loaded functions: " + Intelligence._pObj[extension].length);
   }
 
-  static getObject(name: string, lang: 'js' | 'py') {
+  static getObject(name: string, lang: Lang) {
     LOGGER.appendLine("Getting object named " + name + " in " + lang);
     return Intelligence._pObj[lang].find(func => func.name === name);
   }
 
-  static suggestObject(partialName: string, lang: 'js' | 'py') {
+  static suggestObject(partialName: string, lang: Lang) {
     LOGGER.appendLine("Suggesting object which name has " + partialName + " in " + lang);
     
     const result = Intelligence._pObj[lang]
@@ -71,13 +73,13 @@ export class Intelligence {
   }
 }
 
-export const getSuggest = (lang: 'js' | 'py') =>
+export const getSuggest = (lang: Lang) =>
   async (name: string) =>
     Intelligence
       .suggestObject(name, lang)
       .map(obj => obj2comp[obj.type](obj));
 
-export const getHover = (lang: 'js' | 'py') =>
+export const getHover = (lang: Lang) =>
   async (name: string) => {
     const obj = Intelligence.getObject(name, lang);
     if (!obj) { return; }
