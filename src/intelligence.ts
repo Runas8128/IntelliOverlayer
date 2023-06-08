@@ -8,7 +8,7 @@ import { readdirSync } from 'fs';
 import { generate, parser } from 'peggy';
 import { Hover, MarkdownString } from "vscode";
 
-import { IObject } from './types';
+import { Class, IObject } from './types';
 import { LOGGER, loadImpl, loadLocal, obj2comp, obj2hoverStr, scriptsFolder } from './util';
 
 const isSyntaxError = (e: unknown): e is parser.SyntaxError => (
@@ -71,6 +71,33 @@ export class Intelligence {
     LOGGER.appendLine("Found " + result.length + " object starting with" + result[0]?.name);
     return result;
   }
+
+  static _getObject(name: string, parent: IObject | undefined = undefined) : IObject | undefined {
+    if (!parent || !isClass(parent)) { return; }
+
+    const field = parent.fields.find(field => field.name === name);
+    if (field) { return field; }
+
+    const method = parent.methods.find(method => method.name === name);
+    if (method) { return method; }
+  }
+
+  static getObjRec(name: string, lang: Lang) {
+    if (name === '') { return; }
+
+    const ls = name.split('.');
+    const last = ls.pop();
+
+    let parent : IObject | undefined = undefined;
+    ls.forEach(elem => parent = this._getObject(elem, parent));
+    if (parent && isClass(parent)) {
+      
+    }
+  }
+}
+
+function isClass(obj: IObject) : obj is Class {
+  return obj.type === 'class';
 }
 
 export const getSuggest = (lang: Lang) =>
