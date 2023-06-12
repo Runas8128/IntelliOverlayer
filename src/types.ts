@@ -4,8 +4,8 @@
  * Author: Runas
  */
 
-type Variable = { type: 'variable', name: string, varType: string };
-type Member = { isStatic: boolean };
+export type Variable = { type: 'variable', name: string, varType: string };
+export type Member = { isStatic: boolean };
 
 export type Function = { type: 'function', name: string, args: Variable[], returns: string, comment: string };
 
@@ -28,4 +28,12 @@ export function isFunction(obj: IObject) : obj is Function {
 
 export function isClass(obj: IObject) : obj is Class {
   return obj.type === 'class';
+}
+
+export function isField(obj: IObject) : obj is Field {
+  return obj.type === 'variable' && 'isStatic' in obj;
+}
+
+export function isMethod(obj: IObject) : obj is Method {
+  return obj.type === 'function' && 'isStatic' in obj;
 }

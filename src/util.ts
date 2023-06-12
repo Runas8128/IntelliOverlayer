@@ -9,7 +9,7 @@ import {
   Position, TextDocument, workspace, window
 } from 'vscode';
 
-import { Class, Function } from './types';
+import { Class, Function, Variable, isField, isMethod } from './types';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 
@@ -27,34 +27,41 @@ export const loadLocal = (...path: string[]) => load(__dirname, '..', ...path);
 export const loadImpl = (...path: string[]) => load(scriptsFolder, ...path);
 
 export const obj2comp: { [key: string]: (_: any) => CompletionItem } = {
-  'function': ({ name, args }: Function) => ({
-    label: name,
+  'function': (obj: Function) => ({
+    label: obj.name,
     insertText: new SnippetString(
-      name + `(`
-        + args
+      obj.name + `(`
+        + obj.args
           .map((arg, index) => `$\{${index + 1}:${arg.name}\}`)
           .join(', ')
         + ')$0'
     ),
-    kind: CompletionItemKind.Function,
+    kind: isMethod(obj) ? CompletionItemKind.Method : CompletionItemKind.Function,
   }),
   'class': ({ name }: Class) => ({
     label: name,
     kind: CompletionItemKind.Class,
   }),
+  'variable': (obj: Variable) => ({
+    label: obj.name,
+    kind: isField(obj) ? CompletionItemKind.Field : CompletionItemKind.Variable,
+  }),
 };
 
 export const obj2hoverStr: { [key: string]: (_0: any, _1: 'js' | 'py') => string } = {
-  'function': ({ name, args, returns }: Function, lang: 'js' | 'py') =>
-    (lang === 'js' ? '(function) ' : 'def ')
-      + name + '('
-      + args.map(arg => `${arg.name}: ${arg.type}`).join(', ')
+  'function': (obj: Function, lang: 'js' | 'py') =>
+    (isMethod(obj) ? '(method) ' : (lang === 'js' ? '(function) ' : 'def '))
+      + obj.name + '('
+      + obj.args.map(arg => `${arg.name}: ${arg.type}`).join(', ')
       + ')'
       + (lang === 'js' ? ': ' : ' -> ')
-      + returns,
+      + obj.returns,
   'class': ({ name }: Class, lang: 'js' | 'py') =>
     (lang === 'js' ? 'class ' : '(class) ')
-     + name
+     + name,
+  'variable': (obj: Variable, lang: 'js' | 'py') =>
+    (lang === 'py' ? '(variable) ' : 'const ')
+     + obj.name + ': ' + obj.varType,
 };
 
 const isCustomTag = () =>
