@@ -8,7 +8,7 @@ import { readdirSync } from 'fs';
 import { generate, parser } from 'peggy';
 import { Hover, MarkdownString } from "vscode";
 
-import { Class, IObject } from './types';
+import { IObject, isClass } from './types';
 import { LOGGER, loadImpl, loadLocal, obj2comp, obj2hoverStr, scriptsFolder } from './util';
 
 const isSyntaxError = (e: unknown): e is parser.SyntaxError => (
@@ -97,10 +97,6 @@ export class Intelligence {
 
     return undefined; // Nothing found
   }
-}
-
-function isClass(obj: IObject) : obj is Class {
-  return obj.type === 'class';
 }
 
 export const getSuggest = (lang: Lang) =>
