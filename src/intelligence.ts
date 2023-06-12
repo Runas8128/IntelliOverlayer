@@ -9,7 +9,7 @@ import { generate, parser } from 'peggy';
 import { Hover, MarkdownString } from "vscode";
 
 import { IObject, isClass, isFunction } from './types';
-import { LOGGER, loadImpl, loadLocal, obj2comp, obj2hoverStr, scriptsFolder } from './util';
+import { Lang, LOGGER, loadImpl, loadLocal, obj2comp, obj2hoverStr, scriptsFolder } from './util';
 
 const isSyntaxError = (e: unknown): e is parser.SyntaxError => (
   e instanceof Object &&
@@ -17,8 +17,6 @@ const isSyntaxError = (e: unknown): e is parser.SyntaxError => (
   'expected' in e &&
   'found' in e
 );
-
-type Lang = 'js' | 'py';
 
 export class Intelligence {
   static _pObj: { js: IObject[], py: IObject[] } = { js: [], py: [] };

@@ -13,6 +13,8 @@ import { Class, Function, Variable, isField, isMethod } from './types';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 
+export type Lang = 'js' | 'py';
+
 export const LOGGER = window.createOutputChannel("IntelliOverlayer");
 
 const modsFolder = workspace
@@ -48,18 +50,18 @@ export const obj2comp: { [key: string]: (_: any) => CompletionItem } = {
   }),
 };
 
-export const obj2hoverStr: { [key: string]: (_0: any, _1: 'js' | 'py') => string } = {
-  'function': (obj: Function, lang: 'js' | 'py') =>
+export const obj2hoverStr: { [key: string]: (_0: any, _1: Lang) => string } = {
+  'function': (obj: Function, lang: Lang) =>
     (isMethod(obj) ? '(method) ' : (lang === 'js' ? '(function) ' : 'def '))
       + obj.name + '('
       + obj.args.map(arg => `${arg.name}: ${arg.type}`).join(', ')
       + ')'
       + (lang === 'js' ? ': ' : ' -> ')
       + obj.returns,
-  'class': ({ name }: Class, lang: 'js' | 'py') =>
+  'class': ({ name }: Class, lang: Lang) =>
     (lang === 'js' ? 'class ' : '(class) ')
      + name,
-  'variable': (obj: Variable, lang: 'js' | 'py') =>
+  'variable': (obj: Variable, lang: Lang) =>
     (lang === 'py' ? '(variable) ' : 'const ')
      + obj.name + ': ' + obj.varType,
 };
