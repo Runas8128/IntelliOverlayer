@@ -82,17 +82,20 @@ export class Intelligence {
     if (method) { return method; }
   }
 
-  static getObjRec(name: string, lang: Lang) {
-    if (name === '') { return; }
+  static getObjRec(name: string, lang: Lang) : IObject | undefined {
+    if (name === '') { return undefined; } // string literal length is 0
 
     const ls = name.split('.');
-    const last = ls.pop();
+    const first = ls.shift(), last = ls.pop();
+    if (!first) { return undefined; } // Length is 0
 
-    let parent : IObject | undefined = undefined;
+    let parent : IObject | undefined = this.getObject(first, lang);
+    if (!last) { return parent; } // Length is 1
+
     ls.forEach(elem => parent = this._getObject(elem, parent));
-    if (parent && isClass(parent)) {
-      
-    }
+    if (parent && isClass(parent)) { return this._getObject(last, parent); }
+
+    return undefined; // Nothing found
   }
 }
 
@@ -108,7 +111,7 @@ export const getSuggest = (lang: Lang) =>
 
 export const getHover = (lang: Lang) =>
   async (name: string) => {
-    const obj = Intelligence.getObject(name, lang);
+    const obj = Intelligence.getObjRec(name, lang);
     if (!obj) { return; }
 
     const mdStr = new MarkdownString();
