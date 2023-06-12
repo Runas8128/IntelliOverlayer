@@ -8,7 +8,7 @@ import { readdirSync } from 'fs';
 import { generate, parser } from 'peggy';
 import { Hover, MarkdownString } from "vscode";
 
-import { IObject, isClass } from './types';
+import { IObject, isClass, isFunction } from './types';
 import { LOGGER, loadImpl, loadLocal, obj2comp, obj2hoverStr, scriptsFolder } from './util';
 
 const isSyntaxError = (e: unknown): e is parser.SyntaxError => (
@@ -116,5 +116,8 @@ export const getHover = (lang: Lang) =>
       obj2hoverStr[obj.type](obj, lang),
       lang === 'js' ? 'typescript' : 'python'
     );
+    if (isFunction(obj) && obj.comment.length > 0) {
+      mdStr.appendMarkdown(obj.comment);
+    }
     return new Hover(mdStr);
   };
