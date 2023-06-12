@@ -4,7 +4,7 @@
  * Author: Runas
  */
 
-type Variable = { name: string, type: string };
+type Variable = { type: 'variable', name: string, varType: string };
 type Member = { isStatic: boolean };
 
 export type Function = { type: 'function', name: string, args: Variable[], returns: string, comment: string };

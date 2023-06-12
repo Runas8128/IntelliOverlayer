@@ -43,8 +43,9 @@ JSClass = docs:JSDOC? _ 'class ' _ name:specifier _ '{' members:(cField/cMethod/
 cField = docs:JSDOC? _ 'static ' _ name:specifier ';'
 {
   return {
+    'type': 'variable',
     'name': name,
-    'type': docs?.find(doc => doc.name === 'type')?.type,
+    'varType': docs?.find(doc => doc.name === 'type')?.type,
     'isStatic': true,
   };
 }
@@ -71,8 +72,9 @@ cCtor = docs:JSDOC? _ 'constructor' _ '()' _ '{' members:ctorMember+ '}'
 
 ctorMember = docs:JSDOC? _ "this." name:specifier _ '=' _ specifier _ ';' _ {
   return {
+    'type': 'variable',
     'name': name,
-    'type': docs?.find(doc => doc.name === 'type')?.type,
+    'varType': docs?.find(doc => doc.name === 'type')?.type,
     'isStatic': false,
   };
 }

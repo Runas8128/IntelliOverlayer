@@ -60,8 +60,9 @@ cInit = '  ' _ 'def __init__(self):' [\r\n]+ fields:(cField/cStaticField/cPass)+
 cField = '    ' _ 'self.' name:specifier _ ':' _ type:typeSpec _ "=" _ [^\n]+ '\n'
 {
   return {
+    'type': 'variable',
     'name': name,
-    'type': type,
+    'varType': type,
     isStatic: false,
   };
 }
@@ -69,8 +70,9 @@ cField = '    ' _ 'self.' name:specifier _ ':' _ type:typeSpec _ "=" _ [^\n]+ '\
 cStaticField = '    ' _ name:specifier _ ':' _ type:typeSpec _ "=" _ [^\n]+ '\n'
 {
   return {
+    'type': 'variable',
     'name': name,
-    'type': type,
+    'varType': type,
     isStatic: true,
   };
 }
