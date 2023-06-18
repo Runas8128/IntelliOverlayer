@@ -55,67 +55,87 @@ export class Intelligence {
     LOGGER.appendLine(success + " / " + files.length + ` ${extension} files are loaded.`);
     LOGGER.appendLine("Total loaded functions: " + Intelligence._pObj[extension].length);
   }
+}
 
-  static getObject(name: string, lang: Lang) {
-    LOGGER.appendLine("Getting object named " + name + " in " + lang);
-    return Intelligence._pObj[lang].find(func => func.name === name);
+class IGetter {
+  full: string;
+  parentToken: string[];
+  mainToken: string;
+  lang: Lang;
+  globals: IObject[];
+
+  constructor(name: string, lang: Lang) {
+    this.full = name;
+    this.parentToken = name.split('.');
+    this.mainToken = this.parentToken.pop() || '';
+    this.lang = lang;
+    this.globals = Intelligence._pObj[lang];
   }
 
-  static suggestObject(partialName: string, lang: Lang) {
-    LOGGER.appendLine("Suggesting object which name has " + partialName + " in " + lang);
-    
-    const result = Intelligence._pObj[lang]
-      .filter(func => func.name.toLowerCase().includes(partialName.toLowerCase()));
-    LOGGER.appendLine("Found " + result.length + " object starting with" + result[0]?.name);
+  get suggest() {
+    if (this.mainToken === '') { return []; }
+
+    const result = this.globals
+      .filter(obj => obj.name.toLowerCase().includes(this.mainToken.toLowerCase()));
+
+    const parent = this.parent;
+    if (parent && isClass(parent)) {
+      result.push(
+        ...parent.fields.filter(f => f.name.toLowerCase().includes(this.mainToken.toLowerCase())),
+        ...parent.methods.filter(m => m.name.toLowerCase().includes(this.mainToken.toLowerCase())),
+      );
+    }
+
     return result;
   }
 
-  static _getObject(name: string, parent: IObject | undefined = undefined) : IObject | undefined {
-    if (!parent || !isClass(parent)) { return; }
-
-    const field = parent.fields.find(field => field.name === name);
-    if (field) { return field; }
-
-    const method = parent.methods.find(method => method.name === name);
-    if (method) { return method; }
+  get object() {
+    return this._getObject(this.mainToken, this.parent);
   }
 
-  static getObjRec(name: string, lang: Lang) : IObject | undefined {
-    if (name === '') { return undefined; } // string literal length is 0
+  get parent() : IObject | undefined {
+    let parent : IObject | undefined = undefined;
+    this.parentToken.forEach(token => { parent = this._getObject(token, parent); });
+    return parent;
+  }
 
-    const ls = name.split('.');
-    const first = ls.shift(), last = ls.pop();
-    if (!first) { return undefined; } // Length is 0
+  _getObject(token: string, parent: IObject | undefined = undefined) : IObject | undefined {
+    if (parent && isClass(parent)) {
+      const field = parent.fields.find(f => f.name === token);
+      if (field) { return field; }
 
-    let parent : IObject | undefined = this.getObject(first, lang);
-    if (!last) { return parent; } // Length is 1
+      const method = parent.methods.find(m => m.name === token);
+      if (method) { return method; }
+    }
 
-    ls.forEach(elem => parent = this._getObject(elem, parent));
-    if (parent && isClass(parent)) { return this._getObject(last, parent); }
-
-    return undefined; // Nothing found
+    // Default: find in global namespace
+    return this.globals.find(o => o.name === token);
   }
 }
 
 export const getSuggest = (lang: Lang) =>
   async (name: string) =>
-    Intelligence
-      .suggestObject(name, lang)
+    new IGetter(name, lang).suggest
       .map(obj => obj2comp[obj.type](obj));
 
 export const getHover = (lang: Lang) =>
   async (name: string) => {
-    const obj = Intelligence.getObjRec(name, lang);
-    if (!obj) { return; }
-
-    const mdStr = new MarkdownString();
-    mdStr.supportHtml = true;
-    mdStr.appendCodeblock(
-      obj2hoverStr[obj.type](obj, lang),
-      lang === 'js' ? 'typescript' : 'python'
-    );
-    if (isFunction(obj) && obj.comment.length > 0) {
-      mdStr.appendMarkdown(obj.comment);
-    }
-    return new Hover(mdStr);
+    const obj = new IGetter(name, lang).object;
+    if (obj) { return generateHoverDoc(obj, lang); }
   };
+
+const generateHoverDoc = (obj: IObject, lang: Lang) => {
+  const mdStr = new MarkdownString();
+  mdStr.supportHtml = true;
+  
+  mdStr.appendCodeblock(
+    obj2hoverStr[obj.type](obj, lang),
+    lang === 'js' ? 'typescript' : 'python'
+  );
+
+  if (isFunction(obj) && obj.comment.length > 0) {
+    mdStr.appendMarkdown(obj.comment);
+  }
+  
+  return new Hover(mdStr);
+};
