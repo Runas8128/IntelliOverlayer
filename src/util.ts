@@ -8,6 +8,7 @@ import {
   SnippetString, CompletionItem, CompletionItemKind,
   Position, TextDocument, workspace, window
 } from 'vscode';
+import { parser } from 'peggy';
 
 import { Class, Function, Variable, isField, isMethod } from './types';
 import { readFileSync } from 'fs';
@@ -65,6 +66,13 @@ export const obj2hoverStr: { [key: string]: (_0: any, _1: Lang) => string } = {
     (lang === 'py' ? '(variable) ' : 'const ')
      + obj.name + ': ' + obj.varType,
 };
+
+export const isSyntaxError = (e: unknown): e is parser.SyntaxError => (
+  e instanceof Object &&
+  'location' in e &&
+  'expected' in e &&
+  'found' in e
+);
 
 const isCustomTag = () =>
   workspace

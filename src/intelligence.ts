@@ -5,18 +5,16 @@
  */
 
 import { readdirSync } from 'fs';
-import { generate, parser } from 'peggy';
+import { generate } from 'peggy';
 import { Hover, MarkdownString } from "vscode";
 
 import { IObject, isClass, isFunction } from './types';
-import { Lang, LOGGER, loadImpl, loadLocal, obj2comp, obj2hoverStr, scriptsFolder } from './util';
-
-const isSyntaxError = (e: unknown): e is parser.SyntaxError => (
-  e instanceof Object &&
-  'location' in e &&
-  'expected' in e &&
-  'found' in e
-);
+import {
+  Lang,
+  LOGGER, scriptsFolder,
+  loadImpl, loadLocal, isSyntaxError,
+  obj2comp, obj2hoverStr,
+} from './util';
 
 export class Intelligence {
   static _pObj: { js: IObject[], py: IObject[] } = { js: [], py: [] };
