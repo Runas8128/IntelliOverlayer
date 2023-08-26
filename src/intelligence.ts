@@ -30,7 +30,9 @@ export class Intelligence {
     const { parse } = generate(loadLocal('peg', extension.toUpperCase() + '.peg'));
     let success = 0;
 
-    const files = readdirSync(scriptsFolder).filter(fName => fName.endsWith('.' + extension));
+    const files = readdirSync(scriptsFolder)
+      .filter(fName =>  fName === `Impl.${extension}` ||
+                        fName.endsWith(`_Proxy.${extension}`));
 
     files.forEach(file => {
       try {
