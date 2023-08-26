@@ -5,7 +5,8 @@
  */
 
 import { languages, ExtensionContext } from 'vscode';
-import { Intelligence, getSuggest, getHover } from "./intelligence";
+import { Intelligence } from "./intelligence";
+import { getHover, getSuggest } from './IGetter';
 import { consume } from './util';
 
 // On Activated
