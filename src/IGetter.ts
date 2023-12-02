@@ -1,5 +1,5 @@
 import { IObject, isClass, isFunction } from './types';
-import { Lang, obj2comp, obj2hoverStr } from './util';
+import { obj2comp, obj2hoverStr } from './util';
 import { Intelligence } from './intelligence';
 import { Hover, MarkdownString } from 'vscode';
 
@@ -7,15 +7,13 @@ export class IGetter {
   full: string;
   parentToken: string[];
   mainToken: string;
-  lang: Lang;
   globals: IObject[];
 
-  constructor(name: string, lang: Lang) {
+  constructor(name: string) {
     this.full = name;
     this.parentToken = name.split('.');
     this.mainToken = this.parentToken.pop() || '';
-    this.lang = lang;
-    this.globals = Intelligence._pObj[lang];
+    this.globals = Intelligence._pObj;
   }
 
   get suggest() {
@@ -59,25 +57,20 @@ export class IGetter {
   }
 }
 
-export const getSuggest = (lang: Lang) =>
-  async (name: string) =>
-    new IGetter(name, lang).suggest
-      .map(obj => obj2comp[obj.type](obj));
+export const getSuggest = async (name: string) =>
+  new IGetter(name).suggest
+    .map(obj => obj2comp[obj.type](obj));
 
-export const getHover = (lang: Lang) =>
-  async (name: string) => {
-    const obj = new IGetter(name, lang).object;
-    if (obj) { return generateHoverDoc(obj, lang); }
-  };
+export const getHover = async (name: string) => {
+  const obj = new IGetter(name).object;
+  if (obj) { return generateHoverDoc(obj); }
+};
 
-const generateHoverDoc = (obj: IObject, lang: Lang) => {
+const generateHoverDoc = (obj: IObject) => {
   const mdStr = new MarkdownString();
   mdStr.supportHtml = true;
   
-  mdStr.appendCodeblock(
-    obj2hoverStr[obj.type](obj, lang),
-    lang === 'js' ? 'typescript' : 'python'
-  );
+  mdStr.appendCodeblock(obj2hoverStr[obj.type](obj), 'typescript');
 
   if (isFunction(obj) && obj.comment.length > 0) {
     mdStr.appendMarkdown(obj.comment);

@@ -16,19 +16,11 @@ export function activate(context: ExtensionContext) {
   context.subscriptions.push(
     languages.registerCompletionItemProvider(
       { language: 'javascript', scheme: 'file', },
-      { provideCompletionItems: consume(getSuggest('js'), []) },
-    ),
-    languages.registerCompletionItemProvider(
-      { language: 'python', scheme: 'file', },
-      { provideCompletionItems: consume(getSuggest('py'), []) },
+      { provideCompletionItems: consume(getSuggest, []) },
     ),
     languages.registerHoverProvider(
       { language: 'javascript', scheme: 'file', },
-      { provideHover: consume(getHover('js'), undefined) },
-    ),
-    languages.registerHoverProvider(
-      { language: 'python', scheme: 'file', },
-      { provideHover: consume(getHover('py'), undefined) },
+      { provideHover: consume(getHover, undefined) },
     ),
   );
 }

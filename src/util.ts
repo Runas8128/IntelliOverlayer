@@ -14,8 +14,6 @@ import { Class, Function, Variable, isField, isMethod } from './types';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 
-export type Lang = 'js' | 'py';
-
 export const LOGGER = window.createOutputChannel("IntelliOverlayer");
 
 const modsFolder = workspace
@@ -51,20 +49,15 @@ export const obj2comp: { [key: string]: (_: any) => CompletionItem } = {
   }),
 };
 
-export const obj2hoverStr: { [key: string]: (_0: any, _1: Lang) => string } = {
-  'function': (obj: Function, lang: Lang) =>
-    (isMethod(obj) ? '(method) ' : (lang === 'js' ? '(function) ' : 'def '))
+export const obj2hoverStr: { [key: string]: (_0: any) => string } = {
+  'function': (obj: Function) =>
+    (isMethod(obj) ? '(method) ' : '(function) ')
       + obj.name + '('
       + obj.args.map(arg => `${arg.name}: ${arg.type}`).join(', ')
-      + ')'
-      + (lang === 'js' ? ': ' : ' -> ')
+      + '): '
       + obj.returns,
-  'class': ({ name }: Class, lang: Lang) =>
-    (lang === 'js' ? 'class ' : '(class) ')
-     + name,
-  'variable': (obj: Variable, lang: Lang) =>
-    (lang === 'py' ? '(variable) ' : 'const ')
-     + obj.name + ': ' + obj.varType,
+  'class': ({ name }: Class) => 'class ' + name,
+  'variable': (obj: Variable) => 'const ' + obj.name + ': ' + obj.varType,
 };
 
 export const isSyntaxError = (e: unknown): e is parser.SyntaxError => (
