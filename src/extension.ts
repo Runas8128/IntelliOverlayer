@@ -1,13 +1,6 @@
-/**
- * IntelliOverlayer: Extension for Overlayer IntelliCode
- *
- * author: Runas
- */
-
 import { languages, ExtensionContext } from 'vscode';
 import { Intelligence } from "./intelligence";
-import { getHover, getSuggest } from './IGetter';
-import { consume } from './util';
+import { getHover, getSuggest, consume } from './provider';
 
 // On Activated
 export function activate(context: ExtensionContext) {

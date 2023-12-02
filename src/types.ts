@@ -1,9 +1,3 @@
-/**
- * All types which can be result of parsing impl files.
- * 
- * Author: Runas
- */
-
 export type Variable = { type: 'variable', name: string, varType: string };
 export type Member = { isStatic: boolean };
 

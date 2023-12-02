@@ -1,7 +1,5 @@
-import { IObject, isClass, isFunction } from './types';
-import { obj2comp, obj2hoverStr } from './util';
+import { IObject, isClass } from './types';
 import { Intelligence } from './intelligence';
-import { Hover, MarkdownString } from 'vscode';
 
 export class IGetter {
   full: string;
@@ -56,25 +54,3 @@ export class IGetter {
     return this.globals.find(o => o.name === token);
   }
 }
-
-export const getSuggest = async (name: string) =>
-  new IGetter(name).suggest
-    .map(obj => obj2comp[obj.type](obj));
-
-export const getHover = async (name: string) => {
-  const obj = new IGetter(name).object;
-  if (obj) { return generateHoverDoc(obj); }
-};
-
-const generateHoverDoc = (obj: IObject) => {
-  const mdStr = new MarkdownString();
-  mdStr.supportHtml = true;
-  
-  mdStr.appendCodeblock(obj2hoverStr[obj.type](obj), 'typescript');
-
-  if (isFunction(obj) && obj.comment.length > 0) {
-    mdStr.appendMarkdown(obj.comment);
-  }
-  
-  return new Hover(mdStr);
-};
