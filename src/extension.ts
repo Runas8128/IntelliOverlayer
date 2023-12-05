@@ -1,10 +1,10 @@
 import { languages, ExtensionContext } from 'vscode';
-import { Intelligence } from "./intelligence";
+import { ObjectList } from "./objectList";
 import { getHover, getSuggest, consume } from './provider';
 
 // On Activated
 export function activate(context: ExtensionContext) {
-  Intelligence.init();
+  ObjectList.load();
 
   context.subscriptions.push(
     languages.registerCompletionItemProvider(

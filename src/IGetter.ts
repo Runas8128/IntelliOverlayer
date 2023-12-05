@@ -1,5 +1,5 @@
 import { IObject, isClass } from './types';
-import { Intelligence } from './intelligence';
+import { ObjectList } from './objectList';
 
 export class IGetter {
   full: string;
@@ -11,7 +11,7 @@ export class IGetter {
     this.full = name;
     this.parentToken = name.split('.');
     this.mainToken = this.parentToken.pop() || '';
-    this.globals = Intelligence._pObj;
+    this.globals = ObjectList.list;
   }
 
   get suggest() {

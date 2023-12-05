@@ -12,10 +12,14 @@ function isSyntaxError(e: unknown): e is parser.SyntaxError {
     'found' in e;
 };
 
-export class Intelligence {
-  static _pObj: IObject[] = [];
+export class ObjectList {
+  private static _list: IObject[] = [];
 
-  static init() {
+  static get list() {
+    return this._list;
+  }
+
+  static load() {
     Logger.log(`Loading impl.js contents...`);
 
     const parser = generate(FileLoader.loadLocal('peg', 'JS.peg')).parse;
@@ -29,12 +33,12 @@ export class Intelligence {
     }
     
     Logger.log(success + " / " + total + ` js files are loaded.`);
-    Logger.log("Total loaded functions: " + Intelligence._pObj.length);
+    Logger.log("Total loaded functions: " + ObjectList._list.length);
   }
 
   static parseFile(fName: string, parser: (_0: string) => any) {
     try {
-      Intelligence._pObj.push(...parser(FileLoader.loadImpl(fName)));
+      ObjectList._list.push(...parser(FileLoader.loadImpl(fName)));
       Logger.log(`Loading ${fName} successed.`);
       return true;
     }
