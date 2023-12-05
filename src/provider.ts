@@ -1,14 +1,14 @@
 import { isFunction } from './types';
 import { completionItemGenerator, hoverDocsGenerator } from './generator';
 import { Hover, MarkdownString, Position, TextDocument, workspace } from 'vscode';
-import { IGetter } from './IGetter';
+import { Tokenizer } from './tokenizer';
 
 
-export const getSuggest = async (name: string) => new IGetter(name).suggest
+export const getSuggest = async (name: string) => new Tokenizer(name).suggest
   .map(obj => completionItemGenerator[obj.type](obj));
 
 export const getHover = async (name: string) => {
-  const obj = new IGetter(name).object;
+  const obj = new Tokenizer(name).object;
   if (!obj) { return undefined; }
 
   const mdStr = new MarkdownString();
