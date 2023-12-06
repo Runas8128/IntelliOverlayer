@@ -38,7 +38,7 @@ export class ObjectList {
 
   static parseFile(fName: string, parser: (_0: string) => any) {
     try {
-      ObjectList._list.push(...parser(FileLoader.loadImpl(fName)));
+      ObjectList._list.push(...parser(FileLoader.loadOverlayer('Scripts', fName)));
       Logger.log(`Loading ${fName} successed.`);
       return true;
     }
