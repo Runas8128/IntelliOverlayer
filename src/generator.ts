@@ -14,8 +14,8 @@ export const completionItemGenerator: { [key: string]: (_: any) => CompletionIte
     ),
     kind: isMethod(obj) ? CompletionItemKind.Method : CompletionItemKind.Function,
   }),
-  'class': ({ name }: Class) => ({
-    label: name,
+  'class': (obj: Class) => ({
+    label: obj.name,
     kind: CompletionItemKind.Class,
   }),
   'variable': (obj: Variable) => ({
@@ -31,6 +31,6 @@ export const hoverDocsGenerator: { [key: string]: (_0: any) => string } = {
       + obj.args.map(arg => `${arg.name}: ${arg.type}`).join(', ')
       + '): '
       + obj.returns,
-  'class': ({ name }: Class) => 'class ' + name,
+  'class': (obj: Class) => 'class ' + obj.name,
   'variable': (obj: Variable) => 'const ' + obj.name + ': ' + obj.varType,
 };
